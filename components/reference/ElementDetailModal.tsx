@@ -5,6 +5,9 @@ import type { ElementStatCard, KeywordDefinition } from "@/types";
 import StatCell from "@/components/shared/StatCell";
 import CropMarks from "@/components/shared/CropMarks";
 import keywordsData from "@/data/keywords.json";
+import loreData from "@/data/element-lore.json";
+
+const elementLore = loreData as Record<string, { flavor: string; lore: string }>;
 
 const allKeywords = keywordsData as KeywordDefinition[];
 const keywordMap = new Map<string, KeywordDefinition>();
@@ -25,6 +28,7 @@ interface Props {
 export default function ElementDetailModal({ element, onClose }: Props) {
   const { stats } = element;
   const damageBoxes = Array.from({ length: stats.A }, (_, i) => i);
+  const lore = elementLore[element.id];
 
   const allTerms = [
     ...element.special_rules,
@@ -74,6 +78,25 @@ export default function ElementDetailModal({ element, onClose }: Props) {
         </div>
 
         <div className="p-6">
+          {/* Flavor text */}
+          {lore?.flavor && (
+            <div className="mb-6 border-l-4 border-accent pl-4 py-2 bg-accent-glow">
+              <p className="text-body text-dark m-0 italic leading-relaxed">
+                {lore.flavor}
+              </p>
+            </div>
+          )}
+
+          {/* Lore */}
+          {lore?.lore && (
+            <div className="mb-6">
+              <span className="text-display-section text-dark-50 block mb-2">OPERATIONAL HISTORY</span>
+              <p className="text-body-sm text-secondary m-0 leading-relaxed">
+                {lore.lore}
+              </p>
+            </div>
+          )}
+
           {/* Stat Grid */}
           <div className="grid grid-cols-5 gap-0 mb-6">
             <StatCell label="m" value={stats.M} />

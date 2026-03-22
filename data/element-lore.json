@@ -1,0 +1,770 @@
+{
+  "light-troopers": {
+    "flavor": "\"They call us expendable. We call ourselves survivors.\" — Sgt. Kova, 3rd Freelance Infantry",
+    "lore": "Light trooper squads form the backbone of most mercenary forces. Cheap to field and easy to replace, they nonetheless represent the human element in a battlefield increasingly dominated by remote-operated hardware. Most are recruited from the vast pool of ex-military scattered across the post-collapse world."
+  },
+  "mobile-troopers": {
+    "flavor": "\"Speed keeps you alive longer than armour ever will.\" — Corporal Diaz, Dracos Verdes",
+    "lore": "Mobile trooper squads trade protection for agility, equipped with lightweight exoskeletons and rapid deployment gear. They excel at flanking manoeuvres and rapid repositioning, making them invaluable in the fast-paced engagements of Hardwar-era combat."
+  },
+  "jump-troopers": {
+    "flavor": "\"Three seconds of flight, then the ground comes up fast. You learn to love those three seconds.\" — Jump Instructor's Manual, Chapter 1",
+    "lore": "Equipped with personal jump jets or grav-assisted leap packs, jump troopers can bypass terrain obstacles and strike from unexpected angles. Many operators consider them essential for urban operations where rooftop-to-rooftop mobility can decide an engagement."
+  },
+  "heavy-troopers": {
+    "flavor": "\"We dig in, we hold the line, and we make them pay for every inch.\" — Standing orders, Crimson Brigade infantry platoon",
+    "lore": "Heavy trooper squads wear reinforced combat armour and carry crew-served weapons capable of threatening light vehicles. They sacrifice mobility for survivability, often deployed to anchor defensive positions while faster assets manoeuvre around them."
+  },
+  "airborne-troopers": {
+    "flavor": "\"Orbital insertion is easy. It's the landing that gets complicated.\" — Anonymous Martian Freebooter",
+    "lore": "Airborne troopers are elite infantry trained for deployment via dropship or orbital entry pod. Their ability to dig in immediately upon landing makes them ideal for seizing and holding key terrain ahead of the main force. Many TAC rapid response units rely heavily on airborne assets."
+  },
+  "artillery-troopers": {
+    "flavor": "\"Give me a hilltop and a good spotter, and I'll make the whole valley uninhabitable.\" — Gunnery Sgt. Okafor, Yellow Jackets",
+    "lore": "Artillery trooper squads carry portable indirect fire systems capable of lobbing smart munitions over terrain features. Though cumbersome and slow to relocate, their ability to saturate an area with fire from behind cover makes them a persistent threat that commanders must address."
+  },
+  "special-forces": {
+    "flavor": "\"You won't see us. You won't hear us. You'll just know we were there when the mission's done.\" — Recruitment tagline, Menace Rouge",
+    "lore": "Special forces represent the pinnacle of human military capability in the Hardwar era. Equipped with active camouflage, orbital insertion gear, and enhanced combat training, these elite operators perform the tasks that machines cannot — yet. Most carry genetic or cybernetic enhancements."
+  },
+  "recon-troopers": {
+    "flavor": "\"Information is ammunition. We supply the most valuable kind.\" — Recon doctrine pamphlet, TAC Field Academy",
+    "lore": "Recon trooper squads specialize in forward observation and target acquisition. Their active camouflage and advanced sensor packages allow them to infiltrate enemy positions, designate targets for heavier assets, and withdraw before they are detected."
+  },
+  "scout-vehicle": {
+    "flavor": "\"Fast enough to find trouble, smart enough to report it instead of fighting it.\" — Operator's Guide to Light Reconnaissance",
+    "lore": "Scout vehicles are lightly armoured wheeled platforms designed for rapid area reconnaissance. Speed and sensor capability are prioritized over firepower, making them the eyes and ears of any competent battlegroup on the modern Hardwar battlefield."
+  },
+  "patrol-vehicle": {
+    "flavor": "\"The patrol car is the first line of corporate peace enforcement — and often the last thing raiders see.\" — Scarabee Motors promotional material",
+    "lore": "Patrol vehicles serve dual purposes as light troop transports and perimeter security platforms. Common across corporate enclaves and colonial settlements, they represent the minimum viable security investment for transnationals protecting remote assets."
+  },
+  "apc": {
+    "flavor": "\"Get your people in, get them out, and don't stop for anything in between.\" — APC Operator Certification Manual",
+    "lore": "The armoured personnel carrier remains essential despite the decline of traditional infantry. Tracked for all-terrain capability and armoured against small-arms fire, APCs deliver troops safely to the engagement zone and provide mobile cover during dismounted operations."
+  },
+  "ifv": {
+    "flavor": "\"Half transport, half fire support — all trouble for whoever's on the receiving end.\" — Mercenary Daily equipment review",
+    "lore": "Infantry fighting vehicles bridge the gap between troop transport and direct combat support. Armed with indirect fire capability and sufficient armour to survive moderate threats, IFVs allow mechanized forces to maintain offensive tempo while keeping their infantry mobile."
+  },
+  "ecw": {
+    "flavor": "\"In the electronic fog of Hardwar, the ECW is your lighthouse.\" — Network Warfare Quarterly, Vol. 12",
+    "lore": "Electronic countermeasures warfare vehicles are mobile electronic warfare platforms that can disrupt enemy communications, hack opposing systems, and repair friendly electronics. In an age where battles are won as much in cyberspace as on the ground, ECWs are indispensable."
+  },
+  "light-tank": {
+    "flavor": "\"The light tank died a dozen times in military history. It keeps coming back because nothing else does its job.\" — Armour Tactics for the Modern Age",
+    "lore": "Light tanks offer a balance of firepower, protection, and mobility that heavier platforms cannot match. They fill the gap between reconnaissance vehicles and main battle tanks, providing rapid-response armoured punch for situations where the big guns are too slow."
+  },
+  "medium-tank": {
+    "flavor": "\"A tank can precisely hit fast-moving targets beyond the horizon.\" — Universal Encyclopedia, Canal 2225 Edition",
+    "lore": "Medium tanks represent the workhorse of conventional armoured warfare in the 22nd century. New intelligent alloys reinforced with nanite networks allow for regenerative armour, while small, efficient clean fusion reactors provide a theoretically unlimited range of operations."
+  },
+  "light-spg": {
+    "flavor": "\"Position, fire, relocate. The three commandments of mobile artillery.\" — Field Artillery Officer's Handbook",
+    "lore": "Light self-propelled guns mount powerful indirect fire weapons on tracked chassis, combining the devastation of artillery with enough mobility to avoid counter-battery fire. They are the backbone of fire support for medium-scale Hardwar engagements."
+  },
+  "heavy-tank": {
+    "flavor": "\"When a heavy tank rolls in, the conversation changes.\" — Col. Marchetti, Exor Bidding Team Alpha",
+    "lore": "Heavy tanks represent the apex of conventional armoured vehicle design. Their bracing mass allows them to absorb tremendous punishment while delivering devastating fire. They anchor battlelines and provide the overwhelming firepower needed to crack fortified positions."
+  },
+  "siege-tank": {
+    "flavor": "\"A siege tank doesn't knock on the door. It removes the wall.\" — Razorbach Industries marketing brief",
+    "lore": "Siege tanks mount the heaviest indirect fire weapons available on a mobile tracked platform. Though cumbersome and slow, their ability to reduce fortifications and area-denial firepower makes them essential for any sustained offensive operation against prepared positions."
+  },
+  "armoured-spg": {
+    "flavor": "\"When the Armoured SPG speaks, everyone within six kilometres listens.\" — Forward Observer's Field Notes",
+    "lore": "The armoured self-propelled gun combines the firepower of heavy artillery with enough armour to survive counter-battery fire and incidental combat. These massive platforms form the backbone of strategic fire support for large-scale Hardwar operations."
+  },
+  "light-recon-bot": {
+    "flavor": "\"Four legs, two sensors, zero fear. The perfect scout.\" — Jane's Hardwar Review, 2098",
+    "lore": "Light recon bots are small, agile walker platforms designed for forward observation. Their sensor arrays and spotter capability make them invaluable for directing fire from heavier assets. Most mercenary companies consider them a mandatory investment."
+  },
+  "light-skirmish-bot": {
+    "flavor": "\"Fast, cheap, and surprisingly lethal in pairs — the light skirmish bot redefined what 'expendable' means.\" — Hardwar Engineering Digest",
+    "lore": "Light skirmish bots carry dual weapon systems on a rapid-deployment walker chassis. They operate in screening roles, harassing enemy flanks and exploiting gaps in the line. Their low cost makes them popular with budget-conscious mercenary companies."
+  },
+  "medium-combat-bot": {
+    "flavor": "\"Hardbots quickly proved their worth in point-blank manoeuvres against traditional armour.\" — Universal Encyclopedia, Canal 2225 Edition",
+    "lore": "Medium combat bots represent the standard Hardbot configuration, balancing firepower, protection, and melee capability. Their close combat attachments make them dangerous in the tight quarters where electronic fog forces engagements, proving that armoured brawling is here to stay."
+  },
+  "medium-support-bot": {
+    "flavor": "\"Fire support on legs — able to reach positions no tracked vehicle can.\" — Mercenary Daily, Best Purchases Issue 2097",
+    "lore": "Medium support bots carry indirect fire weapons on a walker platform, combining the mobility advantages of Hardbots with standoff firepower. Their full strike capability allows them to deliver devastating salvoes before relocating to avoid return fire."
+  },
+  "heavy-siege-bot": {
+    "flavor": "\"Multi-storey-tall metal gorillas had a huge advantage over traditional armoured assets in close quarters.\" — Universal Encyclopedia, Canal 2225 Edition",
+    "lore": "Heavy siege bots are massive walker platforms designed to crack fortified positions with indirect fire and close-range gunnery. Their advanced gunnery control systems ensure devastating accuracy, and their sheer mass makes them nearly impossible to dislodge once they establish position."
+  },
+  "heavy-artillery-bot": {
+    "flavor": "\"When you hear the footsteps shake the ground, start praying that the targeting laser isn't pointed at you.\" — Dustlands survivor testimony",
+    "lore": "Heavy artillery bots mount the most powerful indirect fire systems available on a walking chassis. Though slow and exposed, their ability to deliver fire from positions inaccessible to tracked vehicles makes them a strategic asset that can reshape the battlefield."
+  },
+  "light-attack-vtol": {
+    "flavor": "\"Low, fast, and armed — the light attack VTOL is a persistent headache for ground commanders.\" — Anti-Air Defence Manual",
+    "lore": "Light attack VTOLs provide close air support and precision strikes in the congested airspace of Hardwar-era battlefields. Their omnidirectional flight capability and satellite targeting locks allow them to engage targets from any angle, then vanish behind terrain."
+  },
+  "light-scout-vtol": {
+    "flavor": "\"Eyes in the sky that never blink and never tire.\" — Anansi Combine VTOL procurement pitch",
+    "lore": "Light scout VTOLs are the fastest airborne platforms available, trading all armament for maximum speed and sensor capability. Their spotter arrays feed real-time targeting data to ground forces, making them force multipliers far beyond their modest combat class."
+  },
+  "medium-support-vtol": {
+    "flavor": "\"More manoeuvrable and slower VTOLs took the place of traditional fighter jets, providing mixed capability of observation, close air support, and troop transport.\" — Universal Encyclopedia, Canal 2225 Edition",
+    "lore": "Medium support VTOLs carry indirect fire weapons on an omnidirectional airframe, capable of loitering over the battlefield and delivering precision strikes on demand. They represent the evolution of close air support for the electronic warfare age."
+  },
+  "medium-transport-vtol": {
+    "flavor": "\"Your ride in, your eyes overhead, and your shield in the air — all in one package.\" — VTOL Transport Operations Manual",
+    "lore": "Medium transport VTOLs combine troop delivery capability with spotter systems and electronic countermeasures. They can insert forces deep behind enemy lines while jamming opposing sensors, making them essential for the rapid-deployment doctrine of modern Hardwar."
+  },
+  "efreet": {
+    "flavor": "\"Fast, cheap, and terrifyingly effective — the Efreet redefined what a light walker could do on the modern battlefield.\" — Jane's Hardwar Review, 2097",
+    "lore": "Manufactured by Anansi Combine, the Efreet is a lightweight quadruped walker equipped with laser and indirect fire capability. Its rapid mobility and African Federation tech make it a favourite among operators who value speed over firepower. It frequently appears in Federation Phalanx formations."
+  },
+  "shrike": {
+    "flavor": "\"Smart munitions on a fast platform — the Shrike doesn't fight fair, and that's exactly the point.\" — Exor Panzer sales presentation",
+    "lore": "The Shrike is Exor Panzer's entry-level walker, designed as a light strike platform with smart weapons and full strike capability. Its ability to deliver precise, guided fire and reposition quickly makes it popular with Demo Teams showcasing Exor's marques in competitive trials."
+  },
+  "svartalf": {
+    "flavor": "\"Small, nimble, and utterly relentless — the Svartalf embodies Aesir's philosophy that a walker should go anywhere.\" — Consortium Security brief",
+    "lore": "Built by Aesir Gewehr, the Svartalf is a compact jump-capable walker with dual weapons and indirect fire. Named after the dark elves of Norse mythology, it excels at ambush tactics, using its jump jets to seize elevated positions and rain fire on unsuspecting targets below."
+  },
+  "vickers": {
+    "flavor": "\"A railgun on legs — what's not to love?\" — Sgt. Eriksson, Consortium 4th Security Squadron",
+    "lore": "The Vickers is an Aesir Gewehr light walker mounting a railgun, combining long-range precision with nimble mobility. Its ability to rapidly reposition after firing makes it a dangerous sniper platform that forces opponents to keep moving or risk being picked apart at range."
+  },
+  "lancer": {
+    "flavor": "\"The fastest walker chassis on the market, bar none. Blink and it's behind you.\" — Hardwar Speed Trials, Alice Base 2096",
+    "lore": "Manufactured by Anansi Combine, the Lancer is the fastest walker in production, with a movement rating that outpaces most vehicles. Its railgun provides long-range striking power, making it ideal for hit-and-run tactics that exploit its extraordinary speed advantage."
+  },
+  "hari": {
+    "flavor": "\"It moves like a human. It fights like a human. It's better than a human.\" — Shinobi Solutions promotional material",
+    "lore": "The Hari is Shinobi Solutions' light infiltration walker, designed with human-like agility and grasping manipulators. Based in Okinawa City and rumoured to have Yakuza ties through Hanaki Zaibatsu, Shinobi built the Hari for recon and deep infiltration roles where stealth matters more than firepower."
+  },
+  "bahamut": {
+    "flavor": "\"Not a weapon — a tool. But give a tool to a desperate miner, and it becomes the most dangerous weapon on the field.\" — Lessons from the Olympus Insurrection",
+    "lore": "The Bahamut is a modular civilian labot manufactured by Al-Asad Workshops in Damascus. Equipped with grasping manipulators and a hauler frame, it carries no standard weapons but excels in close combat and utility roles. The Olympus Insurrection proved that labots like the Bahamut can tear apart combat vehicles."
+  },
+  "shift-5": {
+    "flavor": "\"Five tonnes of autonomous armour that doesn't know when to quit. Kumi-Tec calls it the future.\" — Battlebot Weekly",
+    "lore": "Kumi-Tec's Shift 5 is an autonomous defensive walker built around an advanced slave AI. Its shield and close combat attachment make it a determined line-holder, while the laser provides ranged capability. There are rumours that Kumi-Tec's bots are only partially designed by humans."
+  },
+  "cutter": {
+    "flavor": "\"The Cutter doesn't walk — it dances. Laser fire, jump jets, and gone before the dust settles.\" — Operator review, Hardwar Boards",
+    "lore": "Built by Aesir Gewehr, the Cutter is a rapid-assault walker equipped with a laser and jump jets. It embodies the Aesir philosophy of aggressive mobility, designed to close distance quickly, deliver punishing fire, and reposition before the enemy can respond."
+  },
+  "torch": {
+    "flavor": "\"Plasma at medium range. Satellite-guided. You don't dodge the Torch — you pray it's pointed elsewhere.\" — Mercenary survival guide",
+    "lore": "The Torch is Aesir Gewehr's precision fire support walker, mounting a plasma weapon with gunnery control and satellite targeting lock. It represents the pinnacle of Aesir's ranged combat doctrine, delivering devastating energy weapons fire with unmatched accuracy."
+  },
+  "buran": {
+    "flavor": "\"Reliable as a Siberian winter and twice as cold. The Buran does exactly what it promises, every time.\" — Syndicate Taskforce procurement report",
+    "lore": "Manufactured by Udar Skorokhod Systems, the Buran is a medium reconnaissance walker favoured by Russian Syndicate operators. Its combination of laser, spotter capability, and alert sensors makes it an excellent forward observation platform. Udar skorokhods are known for their reliability and ease of maintenance."
+  },
+  "arachne": {
+    "flavor": "\"Eight legs, a railgun, and patience. The Arachne is the spider at the centre of the web.\" — Anansi Combine field manual",
+    "lore": "The Arachne is Anansi Combine's medium quadruped walker, mounting a railgun and indirect fire systems on a heavily braced chassis. Its bracing mass allows it to absorb recoil from sustained fire, making it an excellent fire support platform for African Federation operations."
+  },
+  "kuro": {
+    "flavor": "\"An ion cannon that can jump over buildings. Shinobi's idea of subtlety.\" — Yellow Jackets after-action debrief",
+    "lore": "Built by Shinobi Solutions, the Kuro is a medium walker combining an ion cannon with jump jets and grasping manipulators. Designed for the Pacific Rim market, it reflects Shinobi's emphasis on versatility and human-like agility, capable of both ranged engagement and close-quarters combat."
+  },
+  "tetsu": {
+    "flavor": "\"Heavy armour, magnetic accelerator, and hands that can rip a tank hatch clean off. The Tetsu means business.\" — Kami-No Bara tournament commentary",
+    "lore": "The Tetsu is Shinobi Solutions' dedicated assault walker, mounting an XMG on a heavily armoured frame with grasping manipulators. Its agile design allows it to close to melee range despite its armour, where its manipulators can exploit weaknesses in enemy vehicles."
+  },
+  "thrax": {
+    "flavor": "\"It regenerates. It cloaks. It jumps. And it keeps coming. What did Marstech build?\" — Intercepted TAC emergency transmission",
+    "lore": "The Thrax is Marstech Corp's experimental walker, featuring regenerative armour, a cloak projector, and self-repair systems on a frame with inferior durability. Born from Martian innovation, it trades conventional toughness for radical survivability tech that can repair damage faster than enemies can inflict it."
+  },
+  "boris": {
+    "flavor": "\"When a Boris walks through your firebase, it's less of a battle and more of a demolition.\" — Syndicate Taskforce operations log",
+    "lore": "The Boris is Udar Skorokhod Systems' heavy combat walker, mounting an ion cannon with alert sensors and grasping manipulators. Russian skorokhods are known for their massive firepower and high survivability, and the Boris exemplifies both qualities. A core element of Syndicate Taskforce and Udar Industries formations."
+  },
+  "boris-knyaz": {
+    "flavor": "\"The Prince variant trades the gun for a shield and a fist the size of a car. It doesn't need a gun.\" — Operator review, Skorokhod Enthusiast Forum",
+    "lore": "The Boris Knyaz ('Prince') is the close combat variant of Udar's Boris chassis, replacing the ion cannon with a shield and close combat attachment. Its grasping manipulators and alert sensors make it a devastating melee combatant, representing Udar's leadership in manufacturing effective close combat brawlers."
+  },
+  "bolt": {
+    "flavor": "\"Aesir's Bolt: the benchmark by which all heavy walkers are measured.\" — Kinshasa Peace Expo Review, 2098",
+    "lore": "Built by Aesir Gewehr, the Bolt is a versatile heavy walker mounting an XMG with gunnery control and bracing mass. Part of the acclaimed Ironforge Modular Combat System, it can be rapidly reconfigured for different mission profiles while maintaining exceptional fire accuracy on the move."
+  },
+  "neiru": {
+    "flavor": "\"Autonomous, self-repairing, and disturbingly intelligent. The Neiru doesn't need an operator — it needs a negotiator.\" — Kumi-Tec rumour mill",
+    "lore": "Kumi-Tec's Neiru is a heavy autonomous walker with an ion cannon, self-repair systems, and grasping manipulators. Whatever the truth about Kumi-Tec's AI research — rumours of 'mad AIs' and 'killer robots' in undisclosed locations — the Neiru's battlefield performance is exceptional."
+  },
+  "neiru-katana": {
+    "flavor": "\"A duelist's machine. The Katana variant enters close combat not as a last resort, but as a first choice.\" — Battlebot Weekly analysis",
+    "lore": "The Neiru Katana is Kumi-Tec's close combat variant, replacing ranged weapons with a close combat attachment and fragmentation screen. Its autonomous AI and grasping manipulators make it one of the most dangerous melee platforms in production, reflecting Kumi-Tec's expertise in slave AI combat systems."
+  },
+  "groza": {
+    "flavor": "\"The Groza walks, and the earth trembles. Plasma fire turns the sky white. Then there is silence.\" — War correspondent, Conflict Channel 9",
+    "lore": "The Groza ('Thunderstorm') is Udar Skorokhod Systems' assault walker, one of the heaviest platforms in production. Its plasma weapon and gunnery control deliver apocalyptic firepower, while bracing mass keeps it stable during sustained bombardment. A single Groza can dominate an entire sector."
+  },
+  "geroy": {
+    "flavor": "\"Self-repairing, gatling-armed, and assisted by targeting AI — the Geroy is less a walker and more a force of nature.\" — TAC threat assessment briefing",
+    "lore": "The Geroy ('Hero') is Udar's fire superiority walker, mounting a gatling weapon with assisted targeting and self-repair capability. Udar's latest generation features standardized joint connectors for quick modular replacement of destroyed parts and rapid adjustment to battlefield conditions."
+  },
+  "geroy-tsar": {
+    "flavor": "\"Shield raised, smoke deployed, and advancing through everything we threw at it. We fell back.\" — After-action report, unnamed merc company",
+    "lore": "The Geroy Tsar is the command variant of Udar's Geroy chassis, configured for close combat and battlefield coordination. Its shield, smoke screen, spotter capability, and self-repair systems make it a mobile strongpoint that can anchor an entire battleline while directing friendly fire."
+  },
+  "udar": {
+    "flavor": "\"The flagship that carries the company's name. When Udar deploys the Udar, they mean to make a statement.\" — Conflict Investments Weekly",
+    "lore": "The Udar is the namesake platform of Udar Skorokhod Systems, a Class 4 command walker with guided fire, combat hacking, and repair capability. It serves as the centrepiece of Syndicate operations, combining offensive firepower with electronic warfare and logistical support in a single massive frame."
+  },
+  "anvil": {
+    "flavor": "\"Dual weapons, anti-aircraft, indirect fire, and gunnery control. The Anvil doesn't have weaknesses — it has priorities.\" — Aesir Gewehr engineering brief",
+    "lore": "The Anvil is the cornerstone of the Aesir Gewehr Ironforge Modular Combat System, also known as the Hammer & Anvil System. A massive fire support walker with dual weapons and anti-aircraft capability, it can engage targets at any altitude or range with devastating full-strike salvoes."
+  },
+  "anvil-tyr": {
+    "flavor": "\"The Tyr variant trades the Anvil's guns for a flamethrower and jump jets. It's the god of war in walker form.\" — Consortium Security Squadron field review",
+    "lore": "The Anvil Tyr is Aesir's close assault variant, named after the Norse god of war. Its flamethrower, close combat attachment, and jump jets make it a terrifying presence in close quarters, while countermeasures protect it during the approach. A favourite of aggressive operators in the European Consortium."
+  },
+  "heikegani": {
+    "flavor": "\"Railgun and flamethrower — the Heikegani engages you at any distance and wins at all of them.\" — Pacific Rim Hardwar Championship commentary",
+    "lore": "Kumi-Tec's Heikegani is named after the Japanese crab whose shell supposedly bears a samurai's face. This agile heavy walker combines a railgun for long range with a flamethrower for close quarters, supported by gunnery control and countermeasures. A top performer in Rim otaku army tournaments."
+  },
+  "royal-heikegani": {
+    "flavor": "\"The Royal designation means Kumi-Tec's best AI is running the show. Engage at extreme range or not at all.\" — Threat advisory, Desert Fox LLC",
+    "lore": "The Royal Heikegani is Kumi-Tec's premier fire support platform, mounting a plasma weapon with gunnery control, bracing mass, and full strike capability. Its countermeasures protect against electronic attack, making it one of the most formidable conventional fire platforms in the West Pacific Rim arsenal."
+  },
+  "rogue": {
+    "flavor": "\"Jump jets, smokescreens, countermeasures, and enough firepower to level a city block. The Rogue lives up to its name.\" — Exor customer testimonial",
+    "lore": "Exor Panzer's Rogue is a heavy assault walker built for aggressive operators who prefer overwhelming force and evasion over armour. Its jump jets and smokescreen allow it to strike from unexpected angles, while countermeasures defeat guided munitions. A staple of Exor Bidding Team demonstrations."
+  },
+  "puncher": {
+    "flavor": "\"It doesn't shoot you down. It walks up and tears you apart with its bare hands. While your electronics are scrambled.\" — Mercenary horror story, verified",
+    "lore": "The Puncher is Aesir Gewehr's dedicated melee walker, armed with an EMP to disable enemy systems before closing to combat range. Its close combat attachment, grasping manipulators, and self-repair systems make it a relentless close-quarters fighter that can shrug off damage and keep swinging."
+  },
+  "spartacus": {
+    "flavor": "\"The Spartacus doesn't follow orders — it interprets mission objectives and executes them autonomously. That's either brilliant or terrifying.\" — Kumi-Tec investor presentation",
+    "lore": "Kumi-Tec's Spartacus is an autonomous heavy walker with an XMG, self-repair, and grasping manipulators. Its advanced slave AI allows it to operate independently in the field, adapting tactics without operator input. Rumours persist about the true nature of Kumi-Tec's AI research and 'killer robots' in undisclosed locations."
+  },
+  "spartacus-escort": {
+    "flavor": "\"Where the Spartacus goes, the Escort follows — projecting a force shield that makes both nearly invulnerable.\" — Battlefield analysis, Kami-No Bara showcase",
+    "lore": "The Spartacus Escort variant replaces offensive capability with a force shield generator, designed to protect high-value assets in the field. Its XMG provides self-defence while the shield and grasping manipulators allow it to physically interpose itself between threats and its charges."
+  },
+  "warlock": {
+    "flavor": "\"Invisible, unhackable, and armed with EMP and gatling. The Warlock is every network commander's nightmare.\" — Exor Bidding Teams field report",
+    "lore": "The Warlock is Exor Panzer's electronic warfare walker, combining active camouflage with combat hacking, EMP weapons, and jump jets. It can infiltrate enemy networks, disable electronics, and vanish before retaliation arrives. A key component of Exor's Demo Team configuration."
+  },
+  "ranger": {
+    "flavor": "\"Full strike, indirect fire, and a smokescreen to disappear behind. The Ranger writes its own rules of engagement.\" — Exor field testing summary",
+    "lore": "The Ranger is Exor Panzer's fire support walker from the Seeker line, designed for sustained bombardment from concealed positions. Its smokescreen and full strike capability allow it to deliver devastating salvoes and then vanish. A popular choice for both Consortium Security Squadrons and Exor Bidding Hardbots."
+  },
+  "hammer": {
+    "flavor": "\"The Hammer hits twice. Most targets don't survive the first.\" — Aesir Gewehr marketing tagline",
+    "lore": "The Hammer is the offensive half of Aesir Gewehr's Ironforge Modular Combat System. Its dual weapons and gunnery control deliver precise, overwhelming firepower. Paired with the Anvil, the Hammer & Anvil System remains the benchmark for coordinated walker operations in the European Consortium."
+  },
+  "hammer-mjolnir": {
+    "flavor": "\"Named after Thor's legendary weapon, and it lives up to the mythology. Guided fire that never misses.\" — Aesir Gewehr Ironforge System brochure",
+    "lore": "The Hammer Mjolnir is the guided-fire variant of Aesir's Hammer chassis, replacing direct weapons with guided and indirect fire systems. Its gunnery control ensures pinpoint accuracy at extreme range, making it ideal for operators who prefer to eliminate threats before they can close."
+  },
+  "atrax": {
+    "flavor": "\"Eight legs, dual guns, anti-aircraft systems, and it repairs itself. Anansi doesn't build walkers — they build nightmares.\" — Crimson Brigade reconnaissance report",
+    "lore": "The Atrax is Anansi Combine's heavy quadruped walker, named after the Sydney funnel-web spider. Its dual weapons, anti-aircraft capability, and self-repair systems make it a versatile platform that can engage threats at any altitude. A mainstay of African Federation Phalanx formations."
+  },
+  "ricochet": {
+    "flavor": "\"Paragon's quantum targeting doesn't miss. The railgun does the rest.\" — Conflict Investments analyst report",
+    "lore": "Built by Paragon Industries, the Ricochet is a heavy walker mounting a railgun with full strike and self-repair capability. Paragon's quantum-based technologies give it an edge in targeting precision that borders on the theoretical limits of physics. Born from Martian science labs, it represents bleeding-edge research."
+  },
+  "ricochet-ravager": {
+    "flavor": "\"A tank shotgun at walker range. The Ravager variant is for operators who like their combat up close and personal.\" — Mercenary Monthly equipment spotlight",
+    "lore": "The Ricochet Ravager replaces the standard railgun with a tank shotgun and combat gyro stabilization. Paragon Industries designed it for aggressive close-range engagement, where its devastating spread fire and self-repair systems allow it to wade into enemy formations and emerge intact."
+  },
+  "sentinel": {
+    "flavor": "\"Marstech built the Sentinel to survive things that would destroy any other walker. Regenerative armour and self-repair do the rest.\" — Kasei-No Okami operations manual",
+    "lore": "The Sentinel is Marstech Corp's medium-heavy walker, featuring regenerative armour, self-repair systems, and emergency power transfer. Its gaser weapon requires complex reloading but delivers devastating effect. Born from Martian necessity where replacement parts are weeks away, it is built to endure."
+  },
+  "sentinel-crossbow": {
+    "flavor": "\"Guided fire and regenerative armour — the Crossbow variant hits hard and heals fast.\" — Marstech investor conference presentation",
+    "lore": "The Sentinel Crossbow replaces the gaser with guided fire capability while retaining the Sentinel's signature regenerative armour and self-repair. Marstech Corp designed it for sustained operations where logistics are limited, a common scenario on Mars and in remote Terran conflict zones."
+  },
+  "hound": {
+    "flavor": "\"Fast, reliable, and Razorbach-tough. The Hound gets your people where they need to be.\" — Razorbach Strikers driver certification course",
+    "lore": "The Hound is Razorbach Industries' primary scout and troop transport vehicle. Swiss engineering gives it exceptional reliability, while its spotter capability makes it more than just a taxi. A core component of the Razorbach Striker Unit, it pairs spotting data with heavier elements to devastating effect."
+  },
+  "fox": {
+    "flavor": "\"Combine No. 6 builds them by the thousands. Simple, amphibious, and they just keep rolling.\" — Chinese Democracy Army procurement handbook",
+    "lore": "The Fox is Combine No. 6's mass-produced wheeled transport. Though lacking advanced features, its troop transport capability and amphibious nature make it a reliable workhorse for the Chinese Democracy Army. Small surplus batches occasionally appear on free markets worldwide."
+  },
+  "scarab": {
+    "flavor": "\"Exor's entry-level tank — fast, tracked, and carrying enough armour to survive the first exchange.\" — Exor Panzer light armour catalogue",
+    "lore": "The Scarab is Exor Panzer's light tracked vehicle, offering rapid mobility and moderate armour in a compact package. It serves as a light tank for forces that need tracked performance but cannot afford heavier platforms. Its speed makes it effective for flanking operations."
+  },
+  "falconer": {
+    "flavor": "\"The Falconer sees what flies above, and it makes sure they don't fly for long.\" — Anansi Combine air defence brief",
+    "lore": "Manufactured by Anansi Combine, the Falconer is a dedicated anti-aircraft platform with indirect fire capability. Its combination of anti-air sensors and rapid mobility allows it to screen advancing forces from aerial threats, a critical capability in the VTOL-heavy battlespace of modern Hardwar."
+  },
+  "marksman": {
+    "flavor": "\"Plasma accelerator on a light chassis. The Marksman punches well above its weight class.\" — African Federation arms procurement review",
+    "lore": "The Marksman is Anansi Combine's light fire support vehicle, mounting a plasma accelerator that gives it firepower disproportionate to its size. Its rapid mobility allows it to deliver devastating strikes and reposition before heavier enemy assets can respond."
+  },
+  "shtorm-apc": {
+    "flavor": "\"The Shtorm gets Syndicate troopers to the fight fast and in one piece. That's all it needs to do.\" — Kaliber International product sheet",
+    "lore": "The Shtorm APC is Kaliber International's wheeled armoured personnel carrier, designed for rapid troop deployment in Syndicate operations. Its speed and transport capability make it ideal for the fast-moving engagements that characterize Russian PMC doctrine."
+  },
+  "tracked-apc-kaliber": {
+    "flavor": "\"Repair bay on tracks. The crews love it because it keeps their rides running.\" — Syndicate maintenance chief testimonial",
+    "lore": "Kaliber International's Tracked APC combines troop transport with field repair capability, allowing it to support both infantry and vehicle operations simultaneously. Its versatility makes it a popular choice for Syndicate affiliates who value self-sufficiency in extended operations."
+  },
+  "speeder": {
+    "flavor": "\"Hovercraft technology for the budget-conscious operator. Fast enough to outrun anything it can't outfight.\" — Generic equipment buyer's guide",
+    "lore": "The Speeder is a widely available light hovercraft produced by various manufacturers. Its exceptional speed and terrain-ignoring hover capability make it popular with mercenary companies across the globe, from Pacific pirate hunters to desert raiding parties."
+  },
+  "usv-recon": {
+    "flavor": "\"Unmanned, unwatched, and always watching you.\" — Exor Panzer autonomous systems division",
+    "lore": "The USV-Recon is Exor Panzer's autonomous reconnaissance vehicle, combining spotter capability with rapid wheeled mobility. As an unmanned platform, it can be deployed in dangerous forward positions without risking human operators, feeding targeting data back to the battlegroup."
+  },
+  "zulu-ifv": {
+    "flavor": "\"Xhosa builds them tough and ships them worldwide. The Zulu platform is the AK-47 of combat vehicles.\" — Hardwar equipment comparison guide",
+    "lore": "The Zulu IFV is Xhosa International's laser-armed infantry fighting vehicle variant. A reliable, widely available wheeled platform, it represents the solid Generic-grade equipment that Xhosa is recognized for worldwide. Its laser upgrade gives it an edge over standard transports."
+  },
+  "zulu-apc": {
+    "flavor": "\"Simple, reliable, and everywhere. If you've fought in Africa, you've fought against Zulus.\" — Menace Rouge operator interview",
+    "lore": "The Zulu APC is Xhosa International's standard armoured transport, the baseline model that earned the South African manufacturer its worldwide reputation. Its combination of troop capacity and rapid mobility makes it the workhorse of African Federation private armies."
+  },
+  "recon-hover": {
+    "flavor": "\"A Kaliber hovercraft with sensors. It floats over terrain that stops tracked vehicles dead.\" — Syndicate scout doctrine handbook",
+    "lore": "Kaliber International's Recon Hover is a lightweight hovercraft reconnaissance platform. Its ability to skim over water, marshland, and rough terrain makes it invaluable for Syndicate operations in the thawed Siberian permafrost regions where ground conditions are treacherous."
+  },
+  "usv-assault": {
+    "flavor": "\"Modular weapons on an unmanned chassis. Configure it for any mission, deploy it without risking a soul.\" — Razorbach Industries USV catalogue",
+    "lore": "The USV-Assault is Razorbach Industries' modular unmanned combat vehicle. Its weapon loadout can be configured before deployment from a wide selection of options, making it one of the most versatile light platforms available. Swiss modularity at its finest."
+  },
+  "usv-tracked": {
+    "flavor": "\"Heavier armour than its wheeled cousin, same modular flexibility. The tracked USV goes where wheels can't.\" — Razorbach field engineering report",
+    "lore": "The USV-Tracked is Razorbach Industries' tracked variant of their autonomous combat vehicle line. Additional armour protection allows it to operate in higher-threat environments while maintaining the same modular weapon selection that makes the USV family so popular."
+  },
+  "belgutei": {
+    "flavor": "\"StreigerCorp's experimental hovercraft with indirect fire. Fast, nimble, and straight from the R&D lab.\" — Dresden Innovation Quarterly",
+    "lore": "The Belgutei is StreigerCorp's light hover artillery platform, named after a general of the Mongol Empire. This Dresden-based experimental design bureau produces small batches of their renowned hovercraft, and the Belgutei represents their expertise in combining speed with standoff firepower."
+  },
+  "bren-scout-transport": {
+    "flavor": "\"Self-repairing and able to carry troops. The Bren does two jobs and does both well.\" — Razorbach Striker Unit logistics brief",
+    "lore": "The Bren Scout Transport is Razorbach Industries' dual-purpose tracked platform, combining troop transport with self-repair capability. It serves as the logistical backbone of Razorbach Striker Units, delivering infantry while maintaining itself in the field without dedicated support."
+  },
+  "jebe": {
+    "flavor": "\"A railgun mounted on a hovercraft. StreigerCorp's answer to the question nobody thought to ask.\" — Experimental Weapons Forum",
+    "lore": "Named after the Mongol Empire's greatest archer, the Jebe is StreigerCorp's railgun-armed hovercraft. This experimental platform combines extreme mobility with precision long-range fire, representing StreigerCorp's focus on developing and testing new railgun and missile launcher technologies."
+  },
+  "khasar": {
+    "flavor": "\"The Khasar is StreigerCorp's most widely produced hovercraft — which isn't saying much, given their boutique production runs.\" — Market analysis, Kinshasa Arms Fair",
+    "lore": "The Khasar is StreigerCorp's multipurpose hovercraft, named for another Mongol commander. It serves as the baseline chassis for StreigerCorp's hover vehicle family. Its rapid mobility makes it ideal for the fast-moving flanking tactics favoured by its users."
+  },
+  "licaon": {
+    "flavor": "\"The fastest ground vehicle in production. Period. Nothing on wheels, tracks, or hover skirts comes close.\" — Hardwar Speed Trials official results",
+    "lore": "The Licaon is StreigerCorp's extreme-speed reconnaissance hovercraft, with the highest mobility rating of any ground vehicle. Armed only with a spotter array, it trades all combat capability for pure velocity, designed to observe and report at speeds that defy interception."
+  },
+  "ram-recovery-vehicle": {
+    "flavor": "\"When your million-credit walker goes down in the middle of a firefight, you'll be glad you brought a Ram.\" — Razorbach field recovery manual",
+    "lore": "The Ram Recovery Vehicle is Razorbach Industries' dedicated battlefield recovery platform, equipped with a hauler mechanism and field repair capability. It can drag disabled walkers and vehicles to safety while performing emergency repairs, a critical asset for mercenary companies that cannot afford to lose equipment."
+  },
+  "stelaris-hauler": {
+    "flavor": "\"Scarabee makes sports cars. They also make the fastest logistics truck on the market. Go figure.\" — Supply chain officer, Dracos Verdes",
+    "lore": "The Stelaris Hauler is Scarabee Motors' contribution to the military market — a fast wheeled hauler designed for rapid logistics support. Built by the French sports car and aircar manufacturer based in Arles, it features their signature speed in a utilitarian package meant for battlefield supply runs."
+  },
+  "ursus": {
+    "flavor": "\"Amphibious, nimble, and it fits a whole fire team. The Ursus goes where other transports give up.\" — Razorbach amphibious operations guide",
+    "lore": "The Ursus is Razorbach Industries' amphibious troop transport, capable of crossing rivers and coastal waters. Its nimble handling and all-terrain capability make it invaluable for operations in the flooded coastal zones that characterize much of the post-High Tide world."
+  },
+  "ursus-maintenance": {
+    "flavor": "\"Same chassis as the transport, but instead of troops it carries a mobile repair shop.\" — Razorbach field maintenance catalogue",
+    "lore": "The Ursus Maintenance variant replaces the troop bay with field repair equipment, creating an amphibious mobile workshop. Razorbach designed it for extended operations where maintenance depots are unavailable, particularly in the flooded and island-heavy terrain of post-Tide Earth."
+  },
+  "zulu-pds": {
+    "flavor": "\"C-RAM on a Zulu chassis. It shoots down incoming rockets before they reach your position.\" — Xhosa International point defence brochure",
+    "lore": "The Zulu PDS (Point Defence System) is Xhosa International's anti-missile variant of their ubiquitous Zulu platform. Its C-RAM system provides close-in defence against guided munitions, protecting nearby friendly assets from precision strikes."
+  },
+  "zulu-sniper": {
+    "flavor": "\"Patient, precise, and cheap. The Zulu Sniper variant has ended more careers than any other light vehicle.\" — Mercenary casualty statistics, TAC annual report",
+    "lore": "The Zulu Sniper mounts a long-range precision weapon on Xhosa International's reliable wheeled platform. Its troop transport capability means it can carry a forward observer team while providing overwatch fire, making it a popular choice for budget-conscious mercenary companies."
+  },
+  "zulu-sonic": {
+    "flavor": "\"The sonic cannon doesn't just damage — it disorients, disrupts, and demoralizes.\" — Xhosa International sonic weapons whitepaper",
+    "lore": "The Zulu Sonic mounts a sonic cannon on the standard Zulu chassis, providing an area-effect weapon that can disrupt electronics and personnel alike. Xhosa International developed it for crowd control and area denial, but its battlefield applications quickly became apparent."
+  },
+  "boar": {
+    "flavor": "\"The modular Boar & Armadillo system quickly took the APC sales niche by storm.\" — Razorbach Industries corporate history",
+    "lore": "The Boar is Razorbach Industries' medium wheeled combat vehicle, part of the modular Boar & Armadillo system that established Razorbach's reputation. Its modular weapons, troop transport, and self-repair capability make it one of the most versatile medium platforms available."
+  },
+  "armadillo": {
+    "flavor": "\"Tracked, armoured, and modular. The Armadillo is the Boar's tougher sibling for when things get serious.\" — Razorbach Modular Vehicle Systems brochure",
+    "lore": "The Armadillo is the tracked counterpart to Razorbach's Boar, offering heavier armour and smokescreen protection at the cost of speed. Part of the Boar & Armadillo system, it provides the resilient backbone while the Boar handles rapid manoeuvre. A proven combination worldwide."
+  },
+  "mosstrooper": {
+    "flavor": "\"A hovercraft APC with modular weapons. Razorbach covered every possible terrain type with this thing.\" — Consortium Security logistics review",
+    "lore": "The Mosstrooper is Razorbach Industries' hover-capable variant of their modular vehicle family, completing the trifecta of wheeled, tracked, and hovercraft transports. Its rapid mobility and troop transport capability make it the platform of choice for operations over water or marshy terrain."
+  },
+  "kuangnu-assault": {
+    "flavor": "\"Combine No. 6 builds the Kuangnu for the Chinese army. Amphibious, armoured, and mass-produced by the millions.\" — Chinese military equipment overview",
+    "lore": "The Kuangnu Assault is Combine No. 6's amphibious assault vehicle, designed for the Chinese Democracy Army's global force projection needs. Its wheeled, amphibious chassis allows deployment across any terrain type, while smokescreen provides concealment during beach and river crossings."
+  },
+  "kuangnu-recon": {
+    "flavor": "\"The Recon variant adds sensors where the Assault variant carries troops. Same reliable Kuangnu platform.\" — Combine No. 6 product family guide",
+    "lore": "The Kuangnu Recon is the intelligence-gathering variant of Combine No. 6's amphibious vehicle family. Its spotter capability and troop transport allow it to serve as both a forward observation post and personnel carrier, supporting the Chinese army's doctrine of combined-arms reconnaissance."
+  },
+  "kuangnu-support": {
+    "flavor": "\"Indirect fire from an amphibious platform. The Kuangnu Support lobs shells from places the enemy can't reach.\" — Chinese Democracy Army field manual",
+    "lore": "The Kuangnu Support is the fire support variant of Combine No. 6's amphibious line, mounting indirect fire weapons while retaining troop transport. It provides organic artillery support for Chinese amphibious operations, demonstrating Combine No. 6's ability to set new standards in the transport sector."
+  },
+  "tengu": {
+    "flavor": "\"Paragon's quantum tech in an Exor-licensed hull. The Tengu is what happens when Martian science meets European engineering.\" — Arms Industry Today",
+    "lore": "The Tengu is built by Paragon Industries on Exor-licensed hulls. It features laser and smart weapons with incompatible standards that reflect its cutting-edge technology base. Paragon's Tengu, Ancile, Aegis, and Lodestar systems mounted on licensed hulls are great examples of their achievements."
+  },
+  "tie": {
+    "flavor": "\"Fast, countermeasure-equipped, and built in Chinese orbital factories. The Tie is the future of armoured vehicles.\" — Jiuweihu Corp product launch keynote",
+    "lore": "The Tie is Jiuweihu Corporation's medium tracked vehicle, famous for durability and technological advancement. Built in Chinese orbital factories and labs, it features countermeasures and rapid mobility that rival even Marstech Solutions. Combat assets with the fox logo are trusted worldwide."
+  },
+  "gremlin": {
+    "flavor": "\"Plasma accelerator, smokescreen, and speed. The Gremlin hits, hides, and hits again.\" — Exor Bidding Teams demonstration footage narration",
+    "lore": "The Gremlin is Exor Panzer's medium assault vehicle, mounting a plasma accelerator for devastating firepower. Part of the Exor Bidding Hardbots' standard configuration, it demonstrates the hit-and-run doctrine that Exor's Demo Teams use to win competitive tender trials against Razorbach."
+  },
+  "eudoros": {
+    "flavor": "\"Satellite lock, countermeasures, and an armoured chassis that won't quit. The Eudoros is Exor's electronic warfare tank.\" — Exor Panzer electronic systems catalogue",
+    "lore": "The Eudoros is Exor Panzer's dedicated electronic warfare vehicle, equipped with satellite targeting lock and countermeasures. It serves as the sensor hub of Exor Bidding Hardbots formations, providing targeting data and electronic protection for the entire battlegroup."
+  },
+  "troll": {
+    "flavor": "\"An ion cannon on a tracked chassis with full strike. The Troll doesn't discriminate between hard and soft targets.\" — Exor Panzer heavy weapons catalogue",
+    "lore": "The Troll is Exor Panzer's medium ion cannon carrier, designed to disable enemy electronics and deliver devastating energy weapon strikes. Its full strike capability allows it to maximize damage in a single devastating volley, making it a high-priority threat on any battlefield."
+  },
+  "verdun": {
+    "flavor": "\"Named for one of history's most brutal battles, the Verdun lives up to its namesake.\" — Consortium Security Squadron briefing",
+    "lore": "The Verdun is Razorbach Industries' medium tank destroyer, mounting a railgun with smokescreen protection. Named after the infamous WWI battle, it serves as the main anti-armour platform in Consortium Security Squadrons, delivering precise kinetic strikes from concealed positions."
+  },
+  "montgomery": {
+    "flavor": "\"Combine No. 6's finest export. The Montgomery is proof that Chinese mass manufacturing can compete at any level.\" — Free market arms dealer review",
+    "lore": "The Montgomery is Combine No. 6's medium battle tank, mounting an XMG with assisted targeting. Though most Combine products are considered mediocre, their own designs like the Montgomery set better standards for the market with targeting systems that rival more expensive competitors."
+  },
+  "bullterrier": {
+    "flavor": "\"Fast, laser-armed, and relentless. The Bullterrier earned its name by never letting go.\" — Exor Panzer marketing campaign",
+    "lore": "The Bullterrier is Exor Panzer's rapid-assault medium tank, combining laser weapons with full strike and rapid mobility. A key component of Exor Bidding Hardbots and Razorbach Striker Unit sets, it demonstrates Exor's doctrine of aggressive pursuit and sustained firepower."
+  },
+  "geryon": {
+    "flavor": "\"XMG and smart munitions on a tracked chassis. Anansi's Geryon is the thinking operator's medium tank.\" — African arms procurement analysis",
+    "lore": "The Geryon is Anansi Combine's medium tracked vehicle, mounting both XMG and smart weapon systems. Its African Federation tech integration provides superior battlefield awareness, making it a versatile platform that appears in both Syndicate Taskforce and independent mercenary configurations."
+  },
+  "stag": {
+    "flavor": "\"Dual weapons on a hovercraft transport. The Stag carries troops and carries the fight to the enemy simultaneously.\" — Anansi Combine hover platform brochure",
+    "lore": "The Stag is Anansi Combine's hover transport, combining dual weapons with troop carrying capability and rapid mobility. Its ability to skim over any terrain while delivering suppressive fire makes it ideal for the fast insertion tactics favoured by African Federation private armies."
+  },
+  "transtibetan-3000-supporter": {
+    "flavor": "\"Repair bay, transport bay, troop capacity, and smokescreen. The Transtibetan 3000 is a mobile base on wheels.\" — Kaliber International logistics division",
+    "lore": "The Transtibetan 3000 Supporter is Kaliber International's flagship logistics vehicle, combining repair capability, transport bays, and troop capacity in a single massive platform. Combine No. 6's transport designs like the Transtibetan are setting new, better standards in the market."
+  },
+  "transtibetan-3000-hauler": {
+    "flavor": "\"It carries anything, anywhere, and fixes itself along the way. The Transtibetan Hauler is the backbone of any extended campaign.\" — Mercenary logistics monthly",
+    "lore": "The Transtibetan 3000 Hauler is the heavy logistics variant of Kaliber's massive wheeled platform. Its hauler capability, self-repair, and troop transport allow it to serve as a mobile supply depot, keeping forces operational far from established bases. Essential for Syndicate operations in remote Siberia."
+  },
+  "argo-ifv": {
+    "flavor": "\"Hover IFV with a laser — fast, versatile, and available from multiple vendors. The Argo goes everywhere.\" — Multi-manufacturer equipment guide",
+    "lore": "The Argo IFV is a widely produced hover infantry fighting vehicle available from various manufacturers. Its laser weapon and troop transport on a hovercraft chassis make it a popular choice for forces operating in the flooded coastal zones and wetlands created by the High Tide."
+  },
+  "trireme-apc": {
+    "flavor": "\"Exor's hover APC — smokescreen, speed, and enough room for a full squad. It sails over everything.\" — Exor Panzer hover systems catalogue",
+    "lore": "The Trireme APC is Exor Panzer's hovercraft troop transport, combining smokescreen protection with rapid hover mobility. Named after the ancient Greek warship, it reflects Exor's ambition to dominate every vehicle category from tracked to hover, from light to heavy."
+  },
+  "uragan-apc": {
+    "flavor": "\"Xhosa's wheeled APC for the masses. Affordable, fast, and it keeps rolling through everything.\" — Xhosa International export catalogue",
+    "lore": "The Uragan APC is Xhosa International's medium wheeled transport, offering troop capacity and rapid mobility at an affordable price point. Its no-frills reliability has made it a popular export to mercenary companies and developing nations throughout the post-Tide world."
+  },
+  "spartan-mk1-lp": {
+    "flavor": "\"Xhosa builds the hull, the laser does the talking. The Spartan platform is the universal donor of hover tanks.\" — Multi-brand compatibility review",
+    "lore": "The Spartan Mk.I LP is Xhosa International's laser-armed hover tank, featuring assisted targeting for improved accuracy. Its hovercraft mobility and moderate armour make it a solid medium combatant that performs reliably across varied terrain conditions."
+  },
+  "spartan-mk1-pc": {
+    "flavor": "\"A plasma accelerator on a Kaliber-spec hovercraft. The Spartan PC hits harder than anything else in its class.\" — Syndicate armour procurement brief",
+    "lore": "The Spartan Mk.I PC is Kaliber International's plasma-armed variant of the Spartan hover tank platform. Its plasma accelerator delivers devastating energy strikes, while the hover chassis provides the rapid mobility that Syndicate doctrine demands."
+  },
+  "spartan-mk2-ac": {
+    "flavor": "\"Razorbach's XMG variant of the Spartan. Incompatible with standard systems, but who cares when it hits that hard?\" — Razorbach Striker Unit armour review",
+    "lore": "The Spartan Mk.II AC is Razorbach Industries' XMG-armed hover tank, featuring bracing mass for a stable fire platform. Its incompatible standard reflects Razorbach's proprietary engineering approach — making interoperability difficult but performance exceptional."
+  },
+  "spartan-mk2-r": {
+    "flavor": "\"Railgun on a hover chassis with bracing mass. The Mk.II R hits like a freight train and floats like a butterfly.\" — Razorbach Striker Unit tank destroyer doctrine",
+    "lore": "The Spartan Mk.II R is Razorbach's railgun-armed hover tank, designed as a mobile tank destroyer. Its bracing mass absorbs railgun recoil while the hovercraft chassis provides superior positioning. Part of the Martian Contingent's standard equipment roster."
+  },
+  "lrm-carrier": {
+    "flavor": "\"Full strike with guided fire. When the LRM Carrier opens up, the sky fills with warheads.\" — Razorbach Striker Unit bombardment doctrine",
+    "lore": "The LRM Carrier is Razorbach Industries' dedicated long-range missile platform, mounting guided fire systems with full strike capability. A core component of the Razorbach Striker Unit, it delivers precision strikes at extreme range, saturating targets with guided munitions."
+  },
+  "srm-carrier": {
+    "flavor": "\"Where the LRM reaches out, the SRM fills the sky overhead. Short range, maximum devastation.\" — Razorbach Industries missile systems division",
+    "lore": "The SRM Carrier is Razorbach Industries' short-range missile platform, mounting indirect fire weapons with full strike. It provides area saturation fire at shorter ranges than its LRM counterpart, devastating against concentrated enemy formations or defensive positions."
+  },
+  "aegis": {
+    "flavor": "\"Paragon's disruptor field technology makes the Aegis untouchable. Literally.\" — Scientific papers, Paragon Industries quarterly",
+    "lore": "The Aegis is Paragon Industries' defensive warfare vehicle, featuring a disruptor field, point defence, and countermeasures. Built with quantum and energy field technology from Paragon's Martian and Lunar labs, it represents the most advanced defensive platform available on the market."
+  },
+  "lodestar": {
+    "flavor": "\"Quantum radar sees everything. There is no hiding from a Lodestar.\" — Paragon Industries sensor systems presentation",
+    "lore": "The Lodestar is Paragon Industries' advanced sensor platform, equipped with quantum radar and spotter capability. Its ability to detect targets through any concealment makes it the ultimate reconnaissance vehicle, providing battlefield awareness that borders on omniscience."
+  },
+  "ancile": {
+    "flavor": "\"A force shield generator on a mobile platform. The Ancile protects everything around it.\" — Paragon Industries defensive systems brochure",
+    "lore": "The Ancile is Paragon Industries' mobile force shield platform, named after the sacred shield of Mars. Its force shield generator, point defence, and countermeasures create a protective bubble around nearby friendly assets. Rumours persist about advanced FTL research in Paragon's labs."
+  },
+  "spontoon": {
+    "flavor": "\"Dual weapons and anti-aircraft on a heavy tracked chassis. The Spontoon controls the sky and the ground.\" — Kaliber International AA systems catalogue",
+    "lore": "The Spontoon is Kaliber International's heavy anti-aircraft platform, mounting dual weapons with assisted targeting. Kaliber products are sought after for their effectiveness in eliminating aerial advantage, and the Spontoon represents the pinnacle of their air defence capability."
+  },
+  "moccus-mrp": {
+    "flavor": "\"Troop transport, gatling, combat hacker, and countermeasures. The Moccus is a multi-role platform that does everything.\" — Anansi Combine product review",
+    "lore": "The Moccus MRP (Multi-Role Platform) is Anansi Combine's heavy wheeled vehicle, combining troop transport with a gatling weapon, combat hacking, and electronic countermeasures. It reflects Anansi's Silicon Valley origins — a platform defined by its software as much as its hardware."
+  },
+  "kui": {
+    "flavor": "\"Indirect fire and guided missiles from a Jiuweihu chassis. The Kui brings Chinese precision to the artillery game.\" — Jiuweihu Corp heavy weapons division",
+    "lore": "The Kui is Jiuweihu Corporation's heavy missile platform, mounting both indirect and guided fire with satellite lock and full strike capability. Built in Chinese orbital factories, it represents the technological advancement that makes Jiuweihu the Chinese competition to Exor Panzer."
+  },
+  "hoplite-mk1-ac": {
+    "flavor": "\"Marstech's hover tank with an XMG. Born on Mars, built for war on any world.\" — Kasei-No Okami equipment roster",
+    "lore": "The Hoplite Mk.I AC is Marstech Corp's XMG-armed hover tank, featuring countermeasures and exceptional hovercraft mobility. Marstech's focus on hovercraft technology allowed them to establish dominance in aeronautics, and the Hoplite line represents their finest ground combat platform."
+  },
+  "hoplite-mk1-r": {
+    "flavor": "\"The railgun variant sacrifices nothing for the upgrade. Same speed, same armour, bigger punch.\" — Marstech Corp hover armour catalogue",
+    "lore": "The Hoplite Mk.I R replaces the XMG with a railgun while retaining the signature Marstech hover mobility and countermeasures. Martian engineering produces platforms that work flawlessly in both the thin atmosphere of Mars and the diverse environments of Earth."
+  },
+  "hoplite-mk2-dc": {
+    "flavor": "\"Dual cannons and rapid mobility on a hover chassis. The Mk.II DC overwhelms through volume of fire.\" — Marstech heavy armour documentation",
+    "lore": "The Hoplite Mk.II DC is the dual-cannon variant of Marstech's hover tank line, trading single devastating strikes for sustained firepower. Its rapid mobility allows it to maintain offensive pressure while countermeasures defeat incoming guided munitions."
+  },
+  "hoplite-mk2-pc": {
+    "flavor": "\"Plasma accelerator on Marstech's hover platform. Martian science delivering Martian firepower.\" — Marstech Corp investors brief",
+    "lore": "The Hoplite Mk.II PC mounts a plasma accelerator on the proven Hoplite hover chassis, combining devastating energy weapon fire with rapid mobility and countermeasures that protect against the electronic warfare dominating modern battlefields."
+  },
+  "mantis-hover-bt-rc": {
+    "flavor": "\"Gatling fire from a jumping hovercraft. The Mantis RC variant is a nightmare to pin down.\" — African Federation Phalanx operations manual",
+    "lore": "The Mantis Hover BT/RC is Anansi Combine's rotary-cannon armed hover battle tank, featuring jump jets for obstacle clearance and elevated firing positions. Part of the African Federation Phalanx formation, it combines Anansi's hover expertise with devastating close-range firepower."
+  },
+  "mantis-hover-bt-ac": {
+    "flavor": "\"The auto-cannon variant of the Mantis. Maximum firepower, maximum mobility, maximum aggression.\" — Anansi Combine heavy armour division",
+    "lore": "The Mantis Hover BT/AC is the standard cannon variant of Anansi's hover battle tank, mounting the heaviest conventional armament on the Mantis chassis. Its jump jets provide tactical versatility, allowing it to vault over terrain and engage targets from unexpected elevations."
+  },
+  "mantis-hover-bt-srm": {
+    "flavor": "\"Short-range missiles and jump jets. The Mantis SRM gets close, saturates the target, and jumps away.\" — Anansi Combine missile systems brief",
+    "lore": "The Mantis Hover BT/SRM mounts indirect fire missile systems on Anansi's hover platform. Combined with jump jets, it can deliver devastating close-range missile strikes from above before retreating to safety. A core component of African Federation Phalanx formations."
+  },
+  "mantis-hover-bt-lrm": {
+    "flavor": "\"Guided fire from a hovering, jumping platform. The Mantis LRM reaches out and touches someone from behind cover.\" — Anansi Combine long-range strike doctrine",
+    "lore": "The Mantis Hover BT/LRM is the guided-fire variant of Anansi's hover battle tank, delivering precision strikes at extended range. Its jump jets allow it to pop up over cover, fire guided munitions, and drop back into concealment — a tactic uniquely enabled by the Mantis chassis."
+  },
+  "brutus": {
+    "flavor": "\"The monstrous Brutus siege tank needs no introduction. When it arrives, the enemy's options narrow to surrender or annihilation.\" — Razorbach Industries corporate history",
+    "lore": "The Brutus is one of Razorbach Industries' monstrous siege tanks, mounting an ion cannon with bracing mass, full strike, and rapid mobility. Part of the Brutus and Longinus pair that established Razorbach's heavy armour reputation, it is a battlefield centrepiece of the Razorbach Striker Unit."
+  },
+  "longinus": {
+    "flavor": "\"The Longinus trades the Brutus's ion cannon for an XMG. Different weapon, same devastating result.\" — Razorbach Striker Unit heavy armour doctrine",
+    "lore": "The Longinus is the XMG variant of Razorbach Industries' super-heavy tank line, named after the Roman soldier of legend. Its magnetic accelerator delivers catastrophic kinetic strikes, while bracing mass and full strike capability make it a dominant presence in Consortium Security Squadrons."
+  },
+  "claymore": {
+    "flavor": "\"Exor's heaviest tank. Six points of defence, dual cannons, and enough armour to survive anything short of orbital bombardment.\" — Exor Panzer heavy armour showcase",
+    "lore": "The Claymore is Exor Panzer's super-heavy battle tank, the most heavily armoured tracked vehicle in their catalogue. Named after the Scottish greatsword, its dual weapons and gunnery control deliver massive firepower. A centrepiece of Exor Bidding Hardbots demonstrations."
+  },
+  "zeus-heavy-artillery": {
+    "flavor": "\"The Zeus fires smart munitions over the horizon. When it speaks, continents listen.\" — Exor Panzer strategic weapons division",
+    "lore": "The Zeus Heavy Artillery is Exor Panzer's ultimate fire support platform, mounting indirect fire and smart weapons with the highest firepower rating of any tracked vehicle. Though lumbering and slow, its ability to devastate entire grid squares makes it a strategic asset of immense value."
+  },
+  "prometheus-plasma-mortar": {
+    "flavor": "\"Plasma-accelerated indirect fire with smart guidance. The Prometheus makes the Zeus look restrained.\" — Exor Panzer experimental weapons division",
+    "lore": "The Prometheus Plasma Mortar is Exor Panzer's experimental super-heavy artillery platform, combining plasma accelerator technology with indirect fire and smart guidance. Though lumbering, its combination of weapons technologies delivers the most devastating area fire available from any mobile platform."
+  },
+  "kutuzov": {
+    "flavor": "\"Named after the general who defeated Napoleon, the Kutuzov fights the same way — patiently, then devastatingly.\" — Kaliber International heavy armour catalogue",
+    "lore": "The Kutuzov is Kaliber International's super-heavy main battle tank, mounting smart weapons with gunnery control and self-repair. As the Syndicate's heaviest conventional armoured asset, it anchors defensive positions and punishes offensive action against Syndicate interests."
+  },
+  "deimos": {
+    "flavor": "\"Anti-aircraft, full strike, laser, countermeasures, and smokescreen. The Deimos controls every dimension of the battlefield.\" — Kaliber International multi-role systems",
+    "lore": "The Deimos is Kaliber International's anti-aircraft super-heavy tank, mounting a laser with full strike, anti-aircraft capability, countermeasures, and smokescreen. Kaliber's reputation for eliminating aerial advantage reaches its apex with the Deimos."
+  },
+  "apollyon": {
+    "flavor": "\"Eight wheels, a gatling cannon, and anti-aircraft capability. The Apollyon is Xhosa's answer to heavy armour.\" — Xhosa International flagship products",
+    "lore": "The Apollyon is Xhosa International's super-heavy wheeled combat vehicle, mounting a gatling weapon with anti-aircraft and full strike capability. Named after the destroyer angel, it represents Xhosa's ambition to compete in the high-end market alongside their reliable Generic-grade equipment."
+  },
+  "abaddon": {
+    "flavor": "\"The Abaddon is Xhosa's monstrous defence platform — dual weapons, anti-aircraft, and enough firepower to hold a sector alone.\" — Mercenary procurement analysis",
+    "lore": "The Abaddon is Xhosa International's dedicated air defence super-heavy, mounting dual weapons with anti-aircraft and gunnery control. One of Xhosa's distinctive high-end designs alongside the Apollyon, it provides comprehensive air defence coverage capable of denying airspace against determined aerial assault."
+  },
+  "shi": {
+    "flavor": "\"The Shi is Jiuweihu's main battle tank. Dual weapons, countermeasures, and built in orbital factories.\" — Chinese Democracy Army armoured doctrine",
+    "lore": "The Shi is Jiuweihu Corporation's super-heavy tracked battle tank, mounting dual weapons with countermeasures and assisted targeting. As the last superpower left standing on Earth, the Chinese Democracy regularly deploys the Shi to protect their global interests with overwhelming armoured force."
+  },
+  "leonidas-dc": {
+    "flavor": "\"Active camouflage on a super-heavy hover tank with jump jets. Marstech redefined what 'stealth' means at this scale.\" — TAC threat assessment, highest priority",
+    "lore": "The Leonidas DC is Marstech Corp's stealth super-heavy hover tank, combining active camouflage with jump jets. Named after the Spartan king, it represents Marstech's mastery of hover and stealth technologies applied to heavy armour. Part of the Martian Contingent's orbital deployment forces."
+  },
+  "leonidas-dlp": {
+    "flavor": "\"A laser-armed Leonidas that can cloak and jump. Marstech keeps finding ways to terrify ground commanders.\" — Anti-armour warfare symposium notes",
+    "lore": "The Leonidas DLP is the laser-armed variant of Marstech's stealth super-heavy, adding long-range precision fire to the chassis's formidable camouflage and jump capability. Martian contingents deploying Leonidas variants represent the most feared ground forces from the Red Planet."
+  },
+  "lysander-lp": {
+    "flavor": "\"Fast for a super-heavy, accurate with assisted targeting, and armed with a laser. The Lysander LP is Marstech's mobile fortress.\" — Marstech Corp heavy systems division",
+    "lore": "The Lysander LP is Marstech Corp's laser-armed super-heavy hover tank, featuring bracing mass, assisted targeting, and rapid mobility. The Martian Contingent focuses development on hovercraft technology, and the Lysander represents the culmination of that expertise."
+  },
+  "lysander-r": {
+    "flavor": "\"A railgun on a rapid hover chassis with full strike. The Lysander R is Marstech's long arm of destruction.\" — Martian Contingent operations briefing",
+    "lore": "The Lysander R is the railgun variant of Marstech's super-heavy hover tank, designed for anti-armour operations at extreme range. Its full strike and rapid mobility allow it to deliver devastating kinetic strikes and reposition before return fire arrives."
+  },
+  "redoubt": {
+    "flavor": "\"Enclosed turret array, system backup, and gunnery control. The Redoubt is a fortress on wheels.\" — Razorbach Industries premium defence catalogue",
+    "lore": "The Redoubt is Razorbach Industries' premium command vehicle, featuring an enclosed turret array, system backup, and laser with gunnery control. Its alert sensors and comprehensive electronic suite make it ideal as a mobile headquarters for high-value operations."
+  },
+  "zel-1": {
+    "flavor": "\"The Zel-1 is not a weapon. It's every weapon's best friend.\" — Mercenary Daily, 'Best Purchases' review",
+    "lore": "The Zel-1 is Pulaski Robotics' powerful salvage tractor hauler, a massive amphibious platform with combat engineering, repair capability, transport bays, and point defence. Based in Cracow and Lviv, Pulaski is known for custom work and maintenance expertise. The Zel-1 is their masterpiece, highly praised by industry reviews."
+  },
+  "air-car": {
+    "flavor": "\"It's a flying car with armour plating and room for troops. The future is exactly as practical as we hoped.\" — Scarabee Motors aircar division",
+    "lore": "The Air Car is a widely available light VTOL transport produced by various manufacturers including Scarabee Motors. Converted from civilian aircars, they provide rapid troop insertion capability at minimal cost, though their fragile frames make them vulnerable to serious opposition."
+  },
+  "blade": {
+    "flavor": "\"The fastest VTOL in Anansi's stable. It was built for one purpose: get in, hit hard, get out alive.\" — Anansi Combine aerospace division",
+    "lore": "The Blade is Anansi Combine's light attack VTOL, designed for extreme-speed strike missions. Its rapid mobility makes it exceptionally difficult to target, while its attack capability allows it to deliver quick strikes before enemy anti-aircraft systems can react."
+  },
+  "meng": {
+    "flavor": "\"Chinese orbital-entry VTOL. It drops from space and arrives armed.\" — Jiuweihu Corp aerospace catalogue",
+    "lore": "The Meng is Jiuweihu Corporation's light military VTOL, capable of orbital entry operations. Built in Chinese orbital factories, it can deploy directly from space stations or orbital cities like Golden Gate, giving Chinese forces a rapid-response capability most nations cannot match."
+  },
+  "raptor": {
+    "flavor": "\"Alert sensors and spotter arrays on a Razorbach airframe. The Raptor sees everything the ground forces need to know.\" — Razorbach aerial assets guide",
+    "lore": "The Raptor is Razorbach Industries' light observation VTOL, combining alert sensors with spotter capability on a reliable airframe. It provides persistent battlefield surveillance for Razorbach Striker Units, feeding targeting data to ground-based heavy hitters."
+  },
+  "hunter": {
+    "flavor": "\"Indirect fire from the air. The Hunter loiters above the battlefield and rains down precision munitions.\" — Razorbach Industries aerial fire support brief",
+    "lore": "The Hunter is Razorbach Industries' light fire support VTOL, mounting indirect fire weapons on a rapid airframe. A core component of the Razorbach Striker Unit, it provides responsive aerial bombardment paired with Hound scout vehicles for devastating combined-arms effect."
+  },
+  "fscs-transport": {
+    "flavor": "\"Orbital-entry capable, armed, and carrying a full squad. The FSCS Transport delivers forces from space to ground in minutes.\" — Anansi Combine orbital operations manual",
+    "lore": "The FSCS Transport is Anansi Combine's orbital-entry troop carrier, combining transport capability with spotter systems and countermeasures. Its ability to deliver forces directly from orbit makes it invaluable for the rapid-deployment operations of African Federation strategic doctrine."
+  },
+  "fscs-assault": {
+    "flavor": "\"A railgun that falls from orbit. The FSCS Assault arrives with enough firepower to change the equation.\" — Anansi Combine strike doctrine",
+    "lore": "The FSCS Assault is Anansi Combine's orbital-entry strike craft, mounting a railgun with countermeasures. It can deploy from orbit directly into combat, delivering precise kinetic strikes during its descent. A prestige asset of the African Federation's most well-funded private armies."
+  },
+  "fscs-support": {
+    "flavor": "\"Guided fire from orbital entry. The FSCS Support brings precision bombardment from the edge of space.\" — Anansi Combine aerospace catalogue",
+    "lore": "The FSCS Support is the guided-fire variant of Anansi's orbital-entry craft, delivering precision strikes from extreme altitude. Its countermeasures protect it during the vulnerable descent phase, allowing it to survive the anti-aircraft gauntlet and deliver its payload on target."
+  },
+  "sapsan-assault": {
+    "flavor": "\"Active camouflage on a fast VTOL with a laser. The Sapsan appears, fires, and vanishes like a ghost.\" — Vektor Corp stealth systems division",
+    "lore": "The Sapsan Assault is Vektor Corp's stealth attack VTOL, combining active camouflage with a laser weapon and spotter capability. Russian aerospace engineering meets cutting-edge stealth technology, making it the preferred aerial asset for Syndicate covert operations worldwide."
+  },
+  "sapsan-support": {
+    "flavor": "\"Guided fire from an invisible platform. The Sapsan Support is the nightmare you never see coming.\" — Vektor Corp guided weapons systems",
+    "lore": "The Sapsan Support is Vektor Corp's guided-fire stealth VTOL, mounting precision munitions with active camouflage. The merger of Russia's largest aeronautical industries under Vektor's board produced platforms like the Sapsan that combine stealth with devastating precision strike capability."
+  },
+  "sapsan-transport": {
+    "flavor": "\"Stealth troop insertion from a VTOL that the enemy can't see. Vektor makes the impossible routine.\" — Syndicate special operations deployment manual",
+    "lore": "The Sapsan Transport combines Vektor Corp's signature active camouflage with troop carrying capability, allowing covert insertion of forces behind enemy lines. Its guided fire provides self-defence, while rapid mobility and stealth make it nearly impossible to intercept."
+  },
+  "mauser-assault": {
+    "flavor": "\"Fast, satellite-guided, and carrying a gatling cannon. The Mauser Assault is Exor's airborne predator.\" — Exor Panzer aerospace division",
+    "lore": "The Mauser Assault is Exor Panzer's primary attack VTOL, mounting a gatling weapon with satellite lock and rapid mobility. Named after the famous firearms manufacturer, it represents Exor's European heritage in a modern aerial package designed to dominate the low-altitude battlespace."
+  },
+  "mauser-support": {
+    "flavor": "\"Indirect fire from a fast VTOL with satellite targeting. The Mauser Support makes precision bombardment look easy.\" — Exor Bidding Teams aerial demonstration script",
+    "lore": "The Mauser Support is Exor Panzer's fire support VTOL, mounting indirect fire weapons with satellite lock. Part of the Exor Bidding Hardbots and Consortium Security Squadron configurations, it provides aerial bombardment paired with ground-based elements for devastating combined-arms fire."
+  },
+  "r41-aircrane": {
+    "flavor": "\"It lifts walkers from orbit and drops them into battle. The R41 Aircrane redefines tactical deployment.\" — Marstech Corp dropship systems overview",
+    "lore": "The R41 Aircrane is Marstech Corp's heavy lifter VTOL, equipped with a lifter mechanism, orbital entry capability, and drop harness. It can deliver heavy assets directly from orbit to the battlefield, representing Marstech's mastery of the orbital entry class of combat drop assets."
+  },
+  "hellbent-v": {
+    "flavor": "\"Orbital entry, full strike, and troop transport. The Hellbent V brings everything to the party — from space.\" — Marstech Corp premium strike craft catalogue",
+    "lore": "The Hellbent V is Marstech Corp's heavy assault VTOL, combining orbital entry capability with full strike weapons and troop transport. It represents the Martian doctrine of orbital dominance — delivering forces and firepower from space to surface in a single devastating deployment."
+  },
+  "yanli": {
+    "flavor": "\"Guided fire, indirect fire, transport bay, and orbital entry. The Yanli is China's answer to Marstech's dropships.\" — Jiuweihu Corp strategic systems division",
+    "lore": "The Yanli is Jiuweihu Corporation's heavy orbital-entry craft, combining guided and indirect fire with transport bays. Built in Chinese orbital factories, it gives the Chinese Democracy Army orbital deployment capability rivalling Marstech, carrying forces from Golden Gate to any battlefield on Earth."
+  },
+  "l13-assault-dropship": {
+    "flavor": "\"The L13 doesn't just deliver forces — it is a force. Armed, armoured, and capable of holding a landing zone alone.\" — Marstech Corp flagship products",
+    "lore": "The L13 Assault Dropship is Marstech Corp's premier orbital insertion platform, armed with guided fire and XMG, equipped with transport bays, self-repair, and comprehensive countermeasures. The ultimate expression of Martian drop assault doctrine, feared by ground forces across the Solar System."
+  },
+  "celestial": {
+    "flavor": "\"The largest military aircraft in production. Double transport bays, orbital entry, and a railgun. The Celestial is China's orbital fortress.\" — Jiuweihu Corp strategic aerospace division",
+    "lore": "The Celestial is Jiuweihu Corporation's super-heavy orbital command craft, the largest military aircraft in production. Its double transport bays can carry entire battlegroups from orbit, while railgun armament and comprehensive defensive systems allow it to dominate any airspace it enters."
+  },
+  "d7-eliminator-drone": {
+    "flavor": "\"Hover drones with dual weapons. They swarm like angry hornets and they don't feel pain.\" — Anansi Combine autonomous systems brochure",
+    "lore": "The D7 Eliminator Drone is Anansi Combine's attack drone, a small hover platform carrying dual weapons. Deployed in swarms, these autonomous units overwhelm opponents through volume of fire, reflecting Anansi's AI combat algorithm expertise born from their Silicon Valley origins."
+  },
+  "d7-defender-drone": {
+    "flavor": "\"Force shield on a drone. Anansi's Defender variant projects a protective field that covers nearby allies.\" — Anansi Combine defensive systems catalogue",
+    "lore": "The D7 Defender Drone is Anansi Combine's protective drone variant, equipped with a force shield generator. It hovers near high-value assets, projecting an energy barrier that deflects incoming fire. A testament to Anansi's innovation in practical combat applications of advanced technology."
+  },
+  "d7-scout-drone": {
+    "flavor": "\"Small, fast, and always watching. The D7 Scout feeds targeting data to everything with a trigger.\" — Anansi Combine sensor systems brief",
+    "lore": "The D7 Scout Drone is Anansi Combine's reconnaissance variant, equipped with spotter capability on a rapid hover platform. It provides persistent surveillance and target designation for heavier combat assets, making it a force multiplier far beyond its humble combat class."
+  },
+  "stormbreaker-rifle-squad": {
+    "flavor": "\"Exor's infantry arm. Enhanced armour, alert sensors, and self-repair systems built into every suit.\" — Exor Panzer personnel systems division",
+    "lore": "The Stormbreaker Rifle Squad represents Exor Panzer's baseline infantry, equipped with enhanced combat armour featuring alert sensors and self-repair capability. Absolutely essential human personnel are deployed in elite units clad in advanced combat armour from Exor's extensive personnel arms catalogue."
+  },
+  "stormbreaker-heavy-laser-squad": {
+    "flavor": "\"A laser crew in Stormbreaker armour. They dig in and burn anything that moves.\" — Exor Panzer infantry weapons catalogue",
+    "lore": "The Stormbreaker Heavy Laser Squad carries crew-served laser weapons in Exor's enhanced combat armour. Though cumbersome, their ability to dig in and deliver sustained energy weapon fire makes them a formidable defensive asset that can threaten light vehicles and walkers."
+  },
+  "stormbreaker-gatling-squad": {
+    "flavor": "\"Volume of fire from an entrenched position. The Gatling Squad suppresses everything in its arc.\" — Exor Panzer infantry doctrine manual",
+    "lore": "The Stormbreaker Gatling Squad carries man-portable gatling weapons in Exor's combat armour. Their sustained fire capability from dug-in positions makes them excellent area denial troops, capable of suppressing advancing forces and protecting flanks against any opposition."
+  },
+  "stormbreaker-sniper-squad": {
+    "flavor": "\"Active camouflage and a railgun. The Sniper Squad kills what it sees, and it sees everything.\" — Exor Panzer special weapons division",
+    "lore": "The Stormbreaker Sniper Squad combines active camouflage with a squad-served railgun, creating an invisible long-range threat. Exor's enhanced armour allows them to dig in and remain hidden while delivering precision kinetic strikes against high-value targets at extreme range."
+  },
+  "stormbreaker-missile-squad": {
+    "flavor": "\"Infantry-portable indirect fire in Stormbreaker armour. They lob warheads from behind cover all day long.\" — Exor Panzer missile systems catalogue",
+    "lore": "The Stormbreaker Missile Squad carries man-portable missile launchers in Exor's combat armour, providing infantry-portable indirect fire capability. Their ability to dig in and deliver sustained missile fire makes them a persistent threat that is difficult to locate and suppress."
+  },
+  "stormbreaker-jump-infantry": {
+    "flavor": "\"Jump jets in Stormbreaker armour. They leap over walls, land behind you, and open fire before you turn around.\" — Exor Panzer assault infantry brief",
+    "lore": "The Stormbreaker Jump Infantry represents Exor's air-mobile assault troops, equipped with jump jets and enhanced combat armour. Their ability to bypass terrain obstacles and strike from unexpected angles makes them ideal for urban operations and rapid flanking manoeuvres."
+  },
+  "stormbreaker-expeditionary-squad": {
+    "flavor": "\"Satellite lock and alert sensors in the hands of infantry. The Expeditionary Squad sees the bigger picture.\" — Exor Panzer forward operations doctrine",
+    "lore": "The Stormbreaker Expeditionary Squad combines satellite targeting with enhanced sensors, serving as forward air controllers and target designators. They dig in at observation points and feed precision targeting data to heavier assets, multiplying the effectiveness of every gun in the battlegroup."
+  },
+  "dobermann-squad": {
+    "flavor": "\"Active camouflage on Marstech infantry. You'll never see them until it's too late.\" — Kasei-No Okami infantry operations manual",
+    "lore": "The Dobermann Squad is Marstech Corp's elite infantry unit, equipped with active camouflage and rapid mobility. Born from Martian necessity where small numbers must compensate with superior technology, Dobermann squads are the premier reconnaissance infantry of the Red Planet."
+  },
+  "praetorian-power-armor-squad": {
+    "flavor": "\"Power armour not unlike miniature Hardbots, allowing them to keep up with their bigger cousins and tanks.\" — Universal Encyclopedia, Canal 2225 Edition",
+    "lore": "The Praetorian Power Armor Squad is Exor Panzer's heavy infantry, equipped with power suits that blur the line between trooper and walker. Their XMG and active camouflage make them formidable opponents, representing the cutting edge of human military evolution in the Hardwar era."
+  },
+  "cyclone-power-armour-squad": {
+    "flavor": "\"Marstech power armour with a railgun. The Cyclone squad hits harder than most light vehicles.\" — Marstech Corp infantry systems division",
+    "lore": "The Cyclone Power Armour Squad is Marstech Corp's heavy infantry, equipped with railgun-armed power suits and rapid mobility. Their advanced Martian engineering allows them to keep pace with hover tanks, providing infantry support in environments too dangerous for conventional troops."
+  },
+  "nephilim-power-armour-squad": {
+    "flavor": "\"Jump packs, plasma accelerators, and Anansi's AI targeting. The Nephilim fall from the sky like angels of war.\" — African Federation military showcase",
+    "lore": "The Nephilim Power Armour Squad is Anansi Combine's elite jump infantry, equipped with plasma accelerators and jump packs. Named after the Biblical giants, they represent the African Federation's investment in combining cutting-edge combat software with the best human operators available."
+  },
+  "shuriken": {
+    "flavor": "\"Dual weapons, gunnery control, and bracing mass on heavy infantry. Shinobi's Shuriken squads are walking weapon platforms.\" — Pacific Rim Hardwar analysis",
+    "lore": "The Shuriken is Shinobi Solutions' heavy weapons infantry squad, equipped with dual weapons and gunnery control that rival light walkers. Their bracing mass allows sustained fire from dug-in positions, making them exceptionally dangerous static defence troops favoured by Pacific Rim operators."
+  },
+  "auto-cannon-turret": {
+    "flavor": "\"Automated, alert, and always ready. The auto cannon turret never sleeps and never misses its shift.\" — Generic turret procurement guide",
+    "lore": "Auto cannon turrets are widely available static defence emplacements, combining gatling and XMG capability with alert sensors. They provide automated perimeter defence for bases, outposts, and critical infrastructure across the Hardwar-era world."
+  },
+  "plasma-turret": {
+    "flavor": "\"Plasma and gatling fire from a fixed emplacement. Anything that enters the kill zone doesn't leave.\" — Static defence installation manual",
+    "lore": "Plasma turrets mount energy weapons on fixed defensive positions, combining plasma accelerator and gatling fire for devastating area denial. They are a common sight protecting corporate enclaves, military installations, and the new cities built to house Flood refugees."
+  },
+  "rocket-launcher-turret": {
+    "flavor": "\"Anti-aircraft rockets on a turret mount. Nothing flies over this position without permission.\" — Air defence installation guide",
+    "lore": "Rocket launcher turrets provide static indirect fire and anti-aircraft defence from fixed positions. Their combination of ground bombardment and air denial capability makes them essential components of any prepared defensive position in modern Hardwar."
+  },
+  "rail-gun-turret": {
+    "flavor": "\"Railgun and laser on a fixed mount. The kill zone extends to the horizon.\" — Heavy defence emplacement specifications",
+    "lore": "Rail gun turrets mount the heaviest available energy and kinetic weapons on static defensive platforms. Their devastating firepower can engage targets at extreme range, making them the centrepiece of fortified positions that must hold against heavy assault."
+  },
+  "standard-energy-barrier": {
+    "flavor": "\"A wall of energy that stops bullets and bodies. Simple, reliable, and essential.\" — Defensive engineering field manual",
+    "lore": "Standard energy barriers are basic static defence emplacements that project energy fields to block movement and projectiles. Widely available and inexpensive, they provide the fundamental building blocks of any prepared defensive position in the Hardwar era."
+  },
+  "military-energy-barrier": {
+    "flavor": "\"Military-grade barriers with defence mesh integration. Breaching one means facing the full network.\" — Military engineering specifications",
+    "lore": "Military energy barriers are enhanced static defences featuring defence mesh integration that links multiple barriers into a coordinated defensive network. They provide significantly greater protection than standard barriers, forming the backbone of military fortifications and corporate security perimeters."
+  }
+}
