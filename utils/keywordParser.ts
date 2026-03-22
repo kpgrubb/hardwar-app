@@ -1,4 +1,4 @@
-import type { KeywordDefinition } from '../types';
+import type { KeywordDefinition } from '@/types';
 
 /**
  * Build a regex that matches any keyword term or alias in the dictionary.
@@ -7,9 +7,9 @@ import type { KeywordDefinition } from '../types';
 export function buildKeywordRegex(keywords: KeywordDefinition[]): RegExp {
   const allTerms: string[] = [];
   for (const kw of keywords) {
-    allTerms.push(kw.term);
+    if (kw.term.length > 1) allTerms.push(kw.term);
     for (const alias of kw.aliases) {
-      allTerms.push(alias);
+      if (alias.length > 1) allTerms.push(alias);
     }
   }
   // Sort longest first so "Move & Shoot" matches before "Move"
