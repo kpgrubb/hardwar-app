@@ -6,7 +6,6 @@ import ElementBrowser from '@/components/reference/ElementBrowser';
 import PrintSheet from '@/components/reference/PrintSheet';
 import QuickReferenceCards from '@/components/reference/QuickReferenceCards';
 import MissionBrowser from '@/components/reference/MissionBrowser';
-import ChatPanel from '@/components/reference/ChatPanel';
 import elementsData from '@/data/elements.json';
 import type { ElementStatCard } from '@/types';
 
@@ -38,40 +37,28 @@ export default function ReferencePage() {
         </div>
       </div>
 
-      <div className="flex flex-col xl:flex-row gap-6">
-        {/* Main content */}
-        <div className="flex-1 min-w-0">
-          {/* Tab bar */}
-          <div className="flex gap-1 mb-6 pb-3 border-b border-dark-20 no-print">
-            {tabs.map((t) => (
-              <button
-                key={t.id}
-                onClick={() => setTab(t.id)}
-                className={`flex items-center gap-2 px-3 py-1.5 border-none cursor-pointer transition-colors ${
-                  tab === t.id
-                    ? 'bg-accent text-dark'
-                    : 'bg-transparent text-dark-50 hover:text-dark hover:bg-hover'
-                }`}
-              >
-                <span className="text-micro">{t.code}</span>
-                <span className="text-display-section hidden sm:inline">{t.label}</span>
-              </button>
-            ))}
-          </div>
-
-          {tab === 'quick-ref' && <QuickReferenceCards />}
-          {tab === 'elements' && <ElementBrowser elements={elements} />}
-          {tab === 'missions' && <MissionBrowser />}
-          {tab === 'print' && <PrintSheet elements={elements} />}
-        </div>
-
-        {/* Chat sidebar */}
-        <div className="xl:w-[380px] xl:shrink-0 no-print">
-          <div className="xl:sticky xl:top-4">
-            <ChatPanel />
-          </div>
-        </div>
+      {/* Tab bar */}
+      <div className="flex gap-1 mb-6 pb-3 border-b border-dark-20 no-print">
+        {tabs.map((t) => (
+          <button
+            key={t.id}
+            onClick={() => setTab(t.id)}
+            className={`flex items-center gap-2 px-3 py-1.5 border-none cursor-pointer transition-colors ${
+              tab === t.id
+                ? 'bg-accent text-dark'
+                : 'bg-transparent text-dark-50 hover:text-dark hover:bg-hover'
+            }`}
+          >
+            <span className="text-micro">{t.code}</span>
+            <span className="text-display-section hidden sm:inline">{t.label}</span>
+          </button>
+        ))}
       </div>
+
+      {tab === 'quick-ref' && <QuickReferenceCards />}
+      {tab === 'elements' && <ElementBrowser elements={elements} />}
+      {tab === 'missions' && <MissionBrowser />}
+      {tab === 'print' && <PrintSheet elements={elements} />}
     </motion.div>
   );
 }

@@ -1328,7 +1328,8 @@
     "term": "Smokescreen",
     "aliases": [
       "smokescreen",
-      "SMOKESCREEN"
+      "SMOKESCREEN",
+      "Smoke Screen"
     ],
     "category": "special_rule",
     "definition_core": "Use as an action. Until end of turn, element's Cover increased by +3 in addition to other cover bonuses.",
@@ -1377,7 +1378,8 @@
     "term": "Jump Jets",
     "aliases": [
       "jump jets",
-      "JUMP JETS"
+      "JUMP JETS",
+      "Jump Pack"
     ],
     "category": "special_rule",
     "definition_core": "Move in a straight line ignoring terrain no taller than M value. Cannot Move & Shoot. Triggers reactions from brief LoS exposure. Exhausted after use; requires Reload. Walkers, Troopers, Hovercraft.",
@@ -1563,7 +1565,8 @@
     "term": "Combat Hacker",
     "aliases": [
       "combat hacker",
-      "COMBAT HACKER"
+      "COMBAT HACKER",
+      "Hacker"
     ],
     "category": "special_rule",
     "definition_core": "Enables Assault Hack (remove Action Tokens), Control Override (take over enemy), Duel (cyberspace combat), Power/Sensory/Viral Overload (reduce stats).",
@@ -1575,7 +1578,8 @@
     "term": "Transport Bay",
     "aliases": [
       "transport bay",
-      "TRANSPORT BAY"
+      "TRANSPORT BAY",
+      "Transport Bay x2"
     ],
     "category": "special_rule",
     "definition_core": "Allows embarking elements up to C minus 1. Can take twice for double capacity. Can carry Disposable Swarm Drones.",
@@ -1725,7 +1729,8 @@
     "term": "Gunnery Controller",
     "aliases": [
       "gunnery controller",
-      "GUNNERY CONTROLLER"
+      "GUNNERY CONTROLLER",
+      "Gunnery Control"
     ],
     "category": "special_rule",
     "definition_core": "In Shoot or Move & Shoot, may split F between two targets and roll separately. Can be taken multiple times for additional targets.",
@@ -1766,6 +1771,311 @@
     "definition_core": "Performance upgrade allowing movement up to 3x M in a straight line. Only one facing change at beginning or end. Mid-movement turning not allowed except on Paved terrain.",
     "definition_quickplay": null,
     "page_ref_core": 156,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Amphibious",
+    "aliases": [
+      "amphibious",
+      "AMPHIBIOUS"
+    ],
+    "category": "special_rule",
+    "definition_core": "Ground elements cross water at Patrol speed. Watercraft travel on land at Patrol speed as Wheeled motive type.",
+    "definition_quickplay": null,
+    "page_ref_core": 157,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Complex Reload",
+    "aliases": [
+      "complex reload",
+      "COMPLEX RELOAD"
+    ],
+    "category": "special_rule",
+    "definition_core": "Flaw: the element must Reload after every shot. Limits sustained fire capability.",
+    "definition_quickplay": null,
+    "page_ref_core": 162,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Cumbersome",
+    "aliases": [
+      "cumbersome",
+      "CUMBERSOME"
+    ],
+    "category": "special_rule",
+    "definition_core": "Flaw: the element cannot perform Move & Shoot actions.",
+    "definition_quickplay": null,
+    "page_ref_core": 162,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Defence Mesh",
+    "aliases": [
+      "defence mesh",
+      "defense mesh",
+      "DEFENCE MESH"
+    ],
+    "category": "special_rule",
+    "definition_core": "Energy barrier defence system designed for static defence installations. Provides enhanced protection to fortified positions.",
+    "definition_quickplay": null,
+    "page_ref_core": 185,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Incompatible Standard",
+    "aliases": [
+      "incompatible standard",
+      "INCOMPATIBLE STANDARD"
+    ],
+    "category": "special_rule",
+    "definition_core": "Flaw: the element cannot be Repaired by other elements. Self-Repair may still function if available.",
+    "definition_quickplay": null,
+    "page_ref_core": 162,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Inferior Durability",
+    "aliases": [
+      "inferior durability",
+      "INFERIOR DURABILITY"
+    ],
+    "category": "special_rule",
+    "definition_core": "Flaw: the first non-critical hit inflicts +1 additional hit on the element.",
+    "definition_quickplay": null,
+    "page_ref_core": 162,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Static Defence",
+    "aliases": [
+      "static defence",
+      "static defense",
+      "STATIC DEFENCE"
+    ],
+    "category": "special_rule",
+    "definition_core": "Element has M=X and cannot move. Available actions are limited to Shoot, Aimed Shot, Guard, and Do Nothing.",
+    "definition_quickplay": null,
+    "page_ref_core": 146,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Modular",
+    "aliases": [
+      "modular",
+      "MODULAR"
+    ],
+    "category": "special_rule",
+    "definition_core": "Weapon system can be swapped for different loadouts during mustering, allowing flexible configuration before battle.",
+    "definition_quickplay": null,
+    "page_ref_core": 148,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Combat Engineer",
+    "aliases": [
+      "combat engineer",
+      "COMBAT ENGINEER"
+    ],
+    "category": "special_rule",
+    "definition_core": "Can change terrain difficulty by +/-1 level within C-inch radius. Can perform the Dig In action for an adjacent friendly element.",
+    "definition_quickplay": null,
+    "page_ref_core": 153,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Combat Gyro",
+    "aliases": [
+      "combat gyro",
+      "COMBAT GYRO"
+    ],
+    "category": "special_rule",
+    "definition_core": "Walkers and Aircraft equipped with this are immune to Overkill Crashing effects, maintaining stability under heavy fire.",
+    "definition_quickplay": null,
+    "page_ref_core": 157,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Drop Harness",
+    "aliases": [
+      "drop harness",
+      "DROP HARNESS",
+      "Drop-Harness"
+    ],
+    "category": "special_rule",
+    "definition_core": "Allows deployment of transported elements without requiring the carrier to land. Maximum deployment height is 3 inches.",
+    "definition_quickplay": null,
+    "page_ref_core": 157,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Enclosed Turret Array",
+    "aliases": [
+      "enclosed turret array",
+      "ENCLOSED TURRET ARRAY"
+    ],
+    "category": "special_rule",
+    "definition_core": "When in Alert mode, the element gains a 360-degree Arc of Fire, allowing it to engage targets in any direction.",
+    "definition_quickplay": null,
+    "page_ref_core": 157,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Fragmentation Screen",
+    "aliases": [
+      "fragmentation screen",
+      "FRAGMENTATION SCREEN"
+    ],
+    "category": "special_rule",
+    "definition_core": "One-use defensive system. During the first Charge or Counter-Charge against this element, it gains +2C to its Combat Roll.",
+    "definition_quickplay": null,
+    "page_ref_core": 157,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Hauler",
+    "aliases": [
+      "hauler",
+      "HAULER"
+    ],
+    "category": "special_rule",
+    "definition_core": "Can haul elements of the same motive type. Doubles C capacity for hauling without speed loss.",
+    "definition_quickplay": null,
+    "page_ref_core": 153,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Lifter",
+    "aliases": [
+      "lifter",
+      "LIFTER"
+    ],
+    "category": "special_rule",
+    "definition_core": "Aircraft only. Allows the element to lift other elements. Doubles C capacity for lifting operations.",
+    "definition_quickplay": null,
+    "page_ref_core": 153,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Sat-Lock",
+    "aliases": [
+      "sat-lock",
+      "SAT-LOCK",
+      "Sat Lock"
+    ],
+    "category": "special_rule",
+    "definition_core": "Satellite targeting assistance. Grants +1F when shooting at targets with M of 3 or less.",
+    "definition_quickplay": null,
+    "page_ref_core": 157,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Troop Transport",
+    "aliases": [
+      "troop transport",
+      "TROOP TRANSPORT"
+    ],
+    "category": "special_rule",
+    "definition_core": "Allows the element to carry Troopers up to its own C total in capacity.",
+    "definition_quickplay": null,
+    "page_ref_core": 157,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Primary Target",
+    "aliases": [
+      "primary target",
+      "PRIMARY TARGET"
+    ],
+    "category": "special_rule",
+    "definition_core": "Flaw: enemy elements receive -3 to effective distance when shooting at this element, making it easier to hit.",
+    "definition_quickplay": null,
+    "page_ref_core": 162,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Bracing Mass",
+    "aliases": [
+      "bracing mass",
+      "BRACING MASS"
+    ],
+    "category": "special_rule",
+    "definition_core": "Heavy structural reinforcement providing stability to the element, reducing the effects of recoil and impact.",
+    "definition_quickplay": null,
+    "page_ref_core": 157,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "ETBS",
+    "aliases": [
+      "etbs",
+      "ETBS",
+      "Electronic Targeting and Ballistic System"
+    ],
+    "category": "special_rule",
+    "definition_core": "Electronic Targeting and Ballistic System. Advanced fire control system enhancing targeting accuracy.",
+    "definition_quickplay": null,
+    "page_ref_core": 157,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Emergency Power Transfer",
+    "aliases": [
+      "emergency power transfer",
+      "EMERGENCY POWER TRANSFER"
+    ],
+    "category": "special_rule",
+    "definition_core": "Allows the element to reroute power between systems in emergencies, providing operational flexibility under duress.",
+    "definition_quickplay": null,
+    "page_ref_core": 157,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "System Backup",
+    "aliases": [
+      "system backup",
+      "SYSTEM BACKUP"
+    ],
+    "category": "special_rule",
+    "definition_core": "Redundant systems providing enhanced resilience against damage, ensuring continued operation when primary systems fail.",
+    "definition_quickplay": null,
+    "page_ref_core": 157,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Vehicle",
+    "aliases": [
+      "vehicle",
+      "VEHICLE"
+    ],
+    "category": "motive",
+    "definition_core": "Ground combat element using wheels, tracks, or hover propulsion. The primary element type for armoured and mechanised warfare.",
+    "definition_quickplay": null,
+    "page_ref_core": 146,
+    "page_ref_quickplay": null
+  },
+  {
+    "term": "Aircraft",
+    "aliases": [
+      "aircraft",
+      "AIRCRAFT"
+    ],
+    "category": "motive",
+    "definition_core": "Airborne element operating in the Low Altitude Zone. Includes all flying platforms from drones to heavy gunships.",
+    "definition_quickplay": "All Aircraft are at a fixed 6-inch height at all times unless landed.",
+    "page_ref_core": 59,
+    "page_ref_quickplay": 186
+  },
+  {
+    "term": "Dig-In",
+    "aliases": [
+      "dig-in",
+      "DIG-IN"
+    ],
+    "category": "special_rule",
+    "definition_core": "Hyphenated variant of Dig In. Fortified cover when occupying terrain. Grants +3 Cover bonus as long as element remains in place.",
+    "definition_quickplay": null,
+    "page_ref_core": 153,
     "page_ref_quickplay": null
   }
 ]
