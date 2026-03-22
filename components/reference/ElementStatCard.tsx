@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import type { ElementStatCard as ElementStatCardType } from '@/types';
 import StatCell from '@/components/shared/StatCell';
 import CropMarks from '@/components/shared/CropMarks';
+import KeywordText from '@/components/shared/KeywordText';
 
 interface ElementStatCardProps {
   element: ElementStatCardType;
@@ -63,21 +64,17 @@ export default function ElementStatCard({ element, compact, index = 0 }: Element
       <div className="px-4 py-3 border-t border-dark-20 mt-2 flex-1">
         {element.special_rules.length > 0 && (
           <div className="mb-1.5">
-            {element.special_rules.map((rule, i) => (
-              <span key={i} className="text-body-sm text-dark">
-                {rule}
-                {i < element.special_rules.length - 1 && (
-                  <span className="text-dark-50 mx-1">/</span>
-                )}
-              </span>
-            ))}
+            <KeywordText
+              text={element.special_rules.join(' / ')}
+              className="text-body-sm text-dark"
+            />
           </div>
         )}
         {element.weapon_upgrades.length > 0 && (
           <div className="mt-1.5">
             {element.weapon_upgrades.map((weapon, i) => (
               <div key={i} className="text-micro text-dark-50">
-                [{weapon.name}]
+                <KeywordText text={weapon.name} className="text-micro text-dark-50" />
                 {weapon.f_bonus !== 0 && (
                   <span className="text-dark ml-1">
                     F{weapon.f_bonus > 0 ? '+' : ''}{weapon.f_bonus}
@@ -90,11 +87,10 @@ export default function ElementStatCard({ element, compact, index = 0 }: Element
         )}
         {element.performance_upgrades.length > 0 && (
           <div className="mt-1.5">
-            {element.performance_upgrades.map((upgrade, i) => (
-              <span key={i} className="text-body-sm text-dark-50 italic">
-                {upgrade}{i < element.performance_upgrades.length - 1 && ', '}
-              </span>
-            ))}
+            <KeywordText
+              text={element.performance_upgrades.join(', ')}
+              className="text-body-sm text-dark-50 italic"
+            />
           </div>
         )}
       </div>
