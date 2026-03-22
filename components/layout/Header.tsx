@@ -83,14 +83,6 @@ export default function Header() {
               {ruleset.toUpperCase()}
             </button>
 
-            <div className="w-px h-5 bg-dark-50/30" aria-hidden />
-
-            <button
-              onClick={() => { /* sign-out handler — wire to auth provider */ }}
-              className="text-micro text-dark-50 hover:text-white bg-transparent border-none cursor-pointer transition-colors"
-            >
-              SIGN OUT
-            </button>
           </div>
         </div>
       </header>
