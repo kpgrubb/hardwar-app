@@ -18,21 +18,19 @@ const SPAWN_SUBTABLES: Record<string, Array<{ min: number; max: number; unit: st
     { min: 12, max: 12, unit: "Light Aircraft", motive: "Aircraft" },
   ],
   C2: [
-    { min: 1, max: 3, unit: "Medium Infantry", motive: "Trooper" },
-    { min: 4, max: 7, unit: "Medium Vehicle", motive: "Vehicle" },
-    { min: 8, max: 10, unit: "Medium Walker", motive: "Walker" },
-    { min: 11, max: 12, unit: "Medium Aircraft", motive: "Aircraft" },
+    { min: 1, max: 2, unit: "Medium Infantry", motive: "Trooper" },
+    { min: 3, max: 7, unit: "Medium Vehicle", motive: "Vehicle" },
+    { min: 8, max: 11, unit: "Medium Walker", motive: "Walker" },
+    { min: 12, max: 12, unit: "Medium Aircraft", motive: "Aircraft" },
   ],
   C3: [
-    { min: 1, max: 2, unit: "Heavy Infantry", motive: "Trooper" },
-    { min: 3, max: 6, unit: "Heavy Vehicle", motive: "Vehicle" },
+    { min: 1, max: 6, unit: "Heavy Vehicle", motive: "Vehicle" },
     { min: 7, max: 10, unit: "Heavy Walker", motive: "Walker" },
     { min: 11, max: 12, unit: "Heavy Aircraft", motive: "Aircraft" },
   ],
   C4: [
-    { min: 1, max: 5, unit: "Assault Vehicle", motive: "Vehicle" },
-    { min: 6, max: 9, unit: "Assault Walker", motive: "Walker" },
-    { min: 10, max: 12, unit: "Assault Aircraft", motive: "Aircraft" },
+    { min: 1, max: 6, unit: "Assault Vehicle", motive: "Vehicle" },
+    { min: 7, max: 12, unit: "Assault Walker", motive: "Walker" },
   ],
 };
 

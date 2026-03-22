@@ -102,5 +102,61 @@
       "TIEBREAKERS: C3-4 AI targets highest C in LoS. C1-2 AI targets lowest C in LoS. Then most damaged. Then player picks."
     ],
     "page_ref": 187
+  },
+  {
+    "id": "charge-modifiers",
+    "title": "Charge & Combat Roll Modifiers",
+    "ruleset": "both",
+    "items": [
+      "+1C — Charging element",
+      "+1C — Gravity-assisted charge (charging downhill)",
+      "+1C — Per full 4\" moved during Charge",
+      "+1C — Charge from outside defender's LoS",
+      "+1C — Attacker is Walker or Vehicle",
+      "+1C — Defender is Walker or Trooper",
+      "+1C — Ramming Attachment (Vehicles only)",
+      "+1C — Close Combat Attachment (Strike only)",
+      "-1C — Opponent has Shield",
+      "-1C — Attacker is Aircraft",
+      "-1C — Attacker is Immobilised or Ducking Walker",
+      "-1C — Attacker is Hovercraft"
+    ],
+    "page_ref": 49
+  },
+  {
+    "id": "close-combat-actions",
+    "title": "Close Combat Actions",
+    "ruleset": "both",
+    "items": [
+      "STRIKE — Basic attack. Available to all elements.",
+      "BREAK-OFF — Win = disengage, move 1\" away. Both choose Break-Off = automatic, no roll.",
+      "PUSH (Walkers/Vehicles) — Each hit moves combatants 1\" in chosen direction instead of damage.",
+      "TRAMPLE (Walkers/Vehicles) — Win = add C to hits dealt. Lose = Downed + C NOT added to opponent's damage.",
+      "TOPPLE (Walkers) — Win with hits ≥ opponent's C = drop opponent (Crash + Downed).",
+      "BLOCK & PARRY (Walkers) — Hits cancel opponent's hits. Both Block & Parry = auto break-off.",
+      "GRAB & HOLD (Walkers w/ Grasping Manipulators) — Sacrifice 1 hit to force next action as CC.",
+      "FLIP (Walkers w/ GM) — Flip Vehicle = Downed, -1 AT/turn.",
+      "LIFT & THROW (Walkers w/ GM) — Win with hits ≥ target C. Throw C minus target C inches.",
+      "INTERCEPT & PULL (Walkers w/ GM) — Charge Aircraft at walker height + 1\". Win = drag down, Crash."
+    ],
+    "page_ref": 49
+  },
+  {
+    "id": "terrain-reference",
+    "title": "Terrain Effects",
+    "ruleset": "both",
+    "items": [
+      "PAVED — +1M. Wheeled gain Rapid. Extra turn at Rapid speed.",
+      "PLAIN — Default. No special rules.",
+      "ROUGH — -1M. Tracked/Hovercraft/Aircraft ignore.",
+      "DIFFICULT — -1M. Rapid: D12 < distance = 1 hit. No Move & Shoot. Tracked treats as Rough.",
+      "HAZARDOUS — -1M. Patrol/Rapid: D12 < distance = 1 hit.",
+      "DANGEROUS — D12 < total distance = 1 hit. Stacks with other terrain.",
+      "TREACHEROUS — Like Dangerous but lose 1 action instead of taking a hit.",
+      "IMPASSABLE — Cannot enter. Forced entry = Destroyed.",
+      "COVER: Foliage +1\" range/inch. Smoke +2\"/inch. Partial solid: <half = +1, ≥half = +3. Total 6+ = blocks LoS.",
+      "FORTIFIED — Half hits per attack (rounded down)."
+    ],
+    "page_ref": 66
   }
 ]
