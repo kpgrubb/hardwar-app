@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import GridOverlay from "@/components/shared/GridOverlay";
+import DiceRoller from "@/components/shared/DiceRoller";
 
 export default function MainLayout({
   children,
@@ -13,6 +14,7 @@ export default function MainLayout({
       <main className="flex-1 relative z-10 p-6 lg:p-8 max-w-[1320px] mx-auto w-full">
         {children}
       </main>
+      <DiceRoller />
     </div>
   );
 }

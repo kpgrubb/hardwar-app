@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { BRIEFING_MESSAGES } from "./BriefingMessages";
+import elementsData from "@/data/elements.json";
+import missionsData from "@/data/missions.json";
+import keywordsData from "@/data/keywords.json";
 
 function useClock() {
   const [time, setTime] = useState("");
@@ -151,9 +154,9 @@ export default function HomePage() {
             {/* Stats row */}
             <div className="flex gap-6 mt-auto">
               {[
-                { value: "192", label: "ELEMENTS" },
-                { value: "13", label: "MISSIONS" },
-                { value: "167", label: "KEYWORDS" },
+                { value: String(elementsData.length), label: "ELEMENTS" },
+                { value: String(missionsData.length), label: "MISSIONS" },
+                { value: String(keywordsData.length), label: "KEYWORDS" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <span

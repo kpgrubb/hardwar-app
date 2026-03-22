@@ -1,10 +1,12 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import type { ElementStatCard as ElementStatCardType } from '@/types';
 import StatCell from '@/components/shared/StatCell';
 import CropMarks from '@/components/shared/CropMarks';
 import KeywordText from '@/components/shared/KeywordText';
+import ElementDetailModal from './ElementDetailModal';
 
 interface ElementStatCardProps {
   element: ElementStatCardType;
@@ -13,15 +15,17 @@ interface ElementStatCardProps {
 }
 
 export default function ElementStatCard({ element, compact, index = 0 }: ElementStatCardProps) {
+  const [showDetail, setShowDetail] = useState(false);
   const { stats } = element;
   const damageBoxes = Array.from({ length: stats.A }, (_, i) => i);
 
   const card = (
     <div
       className={`stat-card relative bg-bg-card border border-dark-20 overflow-hidden transition-shadow duration-200 hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)] ${
-        compact ? '' : 'h-full'
+        compact ? '' : 'h-full cursor-pointer'
       }`}
       style={compact ? { width: '3.5in', maxWidth: '3.5in' } : undefined}
+      onClick={compact ? undefined : () => setShowDetail(true)}
     >
       <CropMarks size={10} />
 
@@ -105,12 +109,19 @@ export default function ElementStatCard({ element, compact, index = 0 }: Element
   if (compact) return card;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 8 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.02 }}
-    >
-      {card}
-    </motion.div>
+    <>
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: index * 0.02 }}
+      >
+        {card}
+      </motion.div>
+      <AnimatePresence>
+        {showDetail && (
+          <ElementDetailModal element={element} onClose={() => setShowDetail(false)} />
+        )}
+      </AnimatePresence>
+    </>
   );
 }

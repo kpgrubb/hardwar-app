@@ -6,17 +6,19 @@ import ElementBrowser from '@/components/reference/ElementBrowser';
 import PrintSheet from '@/components/reference/PrintSheet';
 import QuickReferenceCards from '@/components/reference/QuickReferenceCards';
 import MissionBrowser from '@/components/reference/MissionBrowser';
+import QuickplayComparison from '@/components/reference/QuickplayComparison';
 import elementsData from '@/data/elements.json';
 import type { ElementStatCard } from '@/types';
 
 const elements = elementsData as ElementStatCard[];
 
-type Tab = 'quick-ref' | 'elements' | 'missions' | 'print';
+type Tab = 'quick-ref' | 'elements' | 'missions' | 'core-vs-qp' | 'print';
 
 const tabs: { id: Tab; label: string; code: string }[] = [
   { id: 'quick-ref', label: 'Quick Reference', code: 'QR' },
   { id: 'elements', label: 'Elements', code: 'EL' },
   { id: 'missions', label: 'Missions', code: 'MS' },
+  { id: 'core-vs-qp', label: 'Core vs QP', code: 'QP' },
   { id: 'print', label: 'Print Cards', code: 'PT' },
 ];
 
@@ -38,7 +40,7 @@ export default function ReferencePage() {
       </div>
 
       {/* Tab bar */}
-      <div className="flex gap-1 mb-6 pb-3 border-b border-dark-20 no-print">
+      <div className="flex gap-1 mb-6 pb-3 border-b border-dark-20 no-print flex-wrap">
         {tabs.map((t) => (
           <button
             key={t.id}
@@ -58,6 +60,7 @@ export default function ReferencePage() {
       {tab === 'quick-ref' && <QuickReferenceCards />}
       {tab === 'elements' && <ElementBrowser elements={elements} />}
       {tab === 'missions' && <MissionBrowser />}
+      {tab === 'core-vs-qp' && <QuickplayComparison />}
       {tab === 'print' && <PrintSheet elements={elements} />}
     </motion.div>
   );
