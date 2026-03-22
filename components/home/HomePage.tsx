@@ -24,10 +24,14 @@ const NAV_LINKS = [
 
 export default function HomePage() {
   const clock = useClock();
-  const [msgIndex, setMsgIndex] = useState(0);
+  const [history, setHistory] = useState<typeof BRIEFING_MESSAGES>(() => {
+    // Pick a random starting message
+    const idx = Math.floor(Math.random() * BRIEFING_MESSAGES.length);
+    return [BRIEFING_MESSAGES[idx]];
+  });
   const [displayedChars, setDisplayedChars] = useState(0);
 
-  const currentMsg = BRIEFING_MESSAGES[msgIndex];
+  const currentMsg = history[0];
   const fullText = `[${currentMsg.prefix}] ${currentMsg.text}`;
 
   // Typewriter for current message
@@ -40,20 +44,25 @@ export default function HomePage() {
       if (i >= fullText.length) clearInterval(id);
     }, 18);
     return () => clearInterval(id);
-  }, [msgIndex, fullText.length]);
+  }, [currentMsg, fullText.length]);
 
-  // Cycle messages
+  // Random message cycling
   useEffect(() => {
     const id = setInterval(() => {
-      setMsgIndex((prev) => (prev + 1) % BRIEFING_MESSAGES.length);
+      setHistory((prev) => {
+        let next: typeof BRIEFING_MESSAGES[number];
+        do {
+          next = BRIEFING_MESSAGES[Math.floor(Math.random() * BRIEFING_MESSAGES.length)];
+        } while (next === prev[0] && BRIEFING_MESSAGES.length > 1);
+        return [next, ...prev.slice(0, 5)];
+      });
     }, 6000);
     return () => clearInterval(id);
   }, []);
 
-  // Feed of recent messages (last 4)
-  const recentMessages = Array.from({ length: 4 }, (_, i) => {
-    const idx = (msgIndex - 1 - i + BRIEFING_MESSAGES.length) % BRIEFING_MESSAGES.length;
-    return BRIEFING_MESSAGES[idx];
+  // Recent messages (skip current, take next 4)
+  const recentMessages = history.slice(1, 5).map((msg) => {
+    return msg;
   });
 
   return (
@@ -198,7 +207,7 @@ export default function HomePage() {
                 </div>
                 <AnimatePresence mode="wait">
                   <motion.p
-                    key={msgIndex}
+                    key={currentMsg.text}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -219,7 +228,7 @@ export default function HomePage() {
                 <span className="text-micro text-dark-50 block mb-2">RECENT TRAFFIC</span>
                 {recentMessages.map((msg, i) => (
                   <motion.div
-                    key={`${msgIndex}-${i}`}
+                    key={`${currentMsg.text}-${i}`}
                     initial={{ opacity: 0, y: -4 }}
                     animate={{ opacity: 1 - i * 0.2, y: 0 }}
                     transition={{ delay: i * 0.05, duration: 0.3 }}
