@@ -1,26 +1,14 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ASCII_FRAMES } from "./AsciiArt";
-import CropMarks from "@/components/shared/CropMarks";
-
-const NAV_LINKS = [
-  { href: "/learn", label: "LEARN THE RULES", code: "01" },
-  { href: "/reference", label: "RULES REFERENCE", code: "02" },
-  { href: "/session", label: "SESSION AID", code: "03" },
-];
+import { BRIEFING_MESSAGES } from "./BriefingMessages";
 
 function useClock() {
   const [time, setTime] = useState("");
   useEffect(() => {
-    const tick = () => {
-      const now = new Date();
-      setTime(
-        now.toISOString().slice(11, 19) + " UTC"
-      );
-    };
+    const tick = () => setTime(new Date().toISOString().slice(11, 19));
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
@@ -28,190 +16,258 @@ function useClock() {
   return time;
 }
 
+const NAV_LINKS = [
+  { href: "/learn", label: "Learn the Rules", code: "01", desc: "Structured modules" },
+  { href: "/reference", label: "Rules Reference", code: "02", desc: "Elements & missions" },
+  { href: "/session", label: "Session Aid", code: "03", desc: "Solo/Co-op engine" },
+];
+
 export default function HomePage() {
   const clock = useClock();
-  const [frameIndex, setFrameIndex] = useState(0);
-  const [revealedLines, setRevealedLines] = useState(0);
+  const [msgIndex, setMsgIndex] = useState(0);
+  const [displayedChars, setDisplayedChars] = useState(0);
 
-  const currentFrame = ASCII_FRAMES[frameIndex];
-  const lines = currentFrame.art.split("\n");
+  const currentMsg = BRIEFING_MESSAGES[msgIndex];
+  const fullText = `[${currentMsg.prefix}] ${currentMsg.text}`;
 
-  // Typewriter reveal
+  // Typewriter for current message
   useEffect(() => {
-    setRevealedLines(0);
-    let line = 0;
+    setDisplayedChars(0);
+    let i = 0;
     const id = setInterval(() => {
-      line++;
-      setRevealedLines(line);
-      if (line >= lines.length) clearInterval(id);
-    }, 40);
+      i++;
+      setDisplayedChars(i);
+      if (i >= fullText.length) clearInterval(id);
+    }, 18);
     return () => clearInterval(id);
-  }, [frameIndex, lines.length]);
+  }, [msgIndex, fullText.length]);
 
-  // Cycle frames
+  // Cycle messages
   useEffect(() => {
     const id = setInterval(() => {
-      setFrameIndex((prev) => (prev + 1) % ASCII_FRAMES.length);
-    }, 5000);
+      setMsgIndex((prev) => (prev + 1) % BRIEFING_MESSAGES.length);
+    }, 6000);
     return () => clearInterval(id);
   }, []);
 
-  const handleKeyDown = useCallback(
-    (e: KeyboardEvent) => {
-      if (e.key === "Enter") {
-        window.location.href = "/reference";
-      }
-    },
-    []
-  );
-
-  useEffect(() => {
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [handleKeyDown]);
+  // Feed of recent messages (last 4)
+  const recentMessages = Array.from({ length: 4 }, (_, i) => {
+    const idx = (msgIndex - 1 - i + BRIEFING_MESSAGES.length) % BRIEFING_MESSAGES.length;
+    return BRIEFING_MESSAGES[idx];
+  });
 
   return (
-    <div className="min-h-screen bg-dark relative overflow-hidden flex flex-col">
-      {/* Blueprint grid — darker variant */}
-      <div
-        className="fixed inset-0 pointer-events-none z-0"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(250,250,248,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(250,250,248,0.03) 1px, transparent 1px)",
-          backgroundSize: "80px 80px",
-        }}
-        aria-hidden
-      />
+    <div className="min-h-screen bg-bg-primary relative overflow-hidden">
+      {/* Dot matrix background */}
+      <div className="fixed inset-0 bg-dot-matrix opacity-40 pointer-events-none z-0" aria-hidden />
 
-      {/* Scanline effect */}
-      <div
-        className="fixed inset-0 pointer-events-none z-30"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(transparent, transparent 2px, rgba(0,0,0,0.05) 2px, rgba(0,0,0,0.05) 4px)",
-        }}
-        aria-hidden
-      />
+      <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 py-8 min-h-screen flex flex-col">
 
-      {/* Content */}
-      <div className="relative z-10 flex-1 flex flex-col max-w-3xl mx-auto w-full px-6 py-8">
-        {/* Top bar — system status */}
-        <div className="flex items-center justify-between mb-12">
-          <div className="flex items-center gap-3">
-            <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-            <span className="text-micro text-dark-50">SYS.ONLINE</span>
+        {/* Top status bar */}
+        <div className="flex items-center justify-between pb-4 border-b border-dark-20 mb-8">
+          <div className="flex items-center gap-4">
+            <div className="w-6 h-6 bg-accent flex items-center justify-center">
+              <span className="text-dark font-bold text-[10px]" style={{ fontFamily: "var(--font-mono)" }}>H</span>
+            </div>
+            <span className="text-micro text-dark-50">ENGINE CORE OBS</span>
           </div>
-          <span className="text-micro text-dark-50">{clock}</span>
+          <div className="flex items-center gap-6">
+            <span className="text-micro text-dark-50">OPERATIONAL</span>
+            <span className="text-micro text-dark">{clock} UTC</span>
+          </div>
         </div>
 
-        {/* Main content — centered */}
-        <div className="flex-1 flex flex-col items-center justify-center">
-          {/* ASCII art display */}
-          <div className="relative mb-10 w-full max-w-md">
-            <CropMarks size={16} className="!border-dark-50/20" />
-            <div className="border border-dark-50/10 p-6">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={frameIndex}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <pre
-                    className="text-accent text-center leading-tight select-none"
-                    style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: "11px",
-                      letterSpacing: "0.02em",
-                    }}
-                  >
-                    {lines
-                      .slice(0, revealedLines)
-                      .join("\n")}
-                  </pre>
-                  {/* Reserve space for unrevealed lines */}
-                  <pre
-                    className="invisible"
-                    style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: "11px",
-                      height: 0,
-                      overflow: "hidden",
-                    }}
-                    aria-hidden
-                  >
-                    {lines.join("\n")}
-                  </pre>
-                </motion.div>
-              </AnimatePresence>
+        {/* Main grid */}
+        <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-8">
 
-              {/* Element label */}
-              <div className="text-center mt-4 border-t border-dark-50/10 pt-3">
-                <span className="text-micro text-accent-dark">
-                  {currentFrame.label}
-                </span>
-              </div>
+          {/* Left column — Hero + Nav */}
+          <div className="lg:col-span-5 flex flex-col">
+            {/* Callsign block */}
+            <div className="mb-8">
+              <span className="text-micro text-dark-50 block mb-2">DEPLOYMENT TERMINAL</span>
+              <h1
+                className="text-dark m-0 leading-none"
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "clamp(56px, 10vw, 96px)",
+                  fontWeight: 700,
+                  letterSpacing: "0.04em",
+                  textTransform: "uppercase",
+                }}
+              >
+                HARD
+                <br />
+                WAR
+              </h1>
             </div>
 
-            {/* Frame indicator dots */}
-            <div className="flex justify-center gap-1.5 mt-3">
-              {ASCII_FRAMES.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setFrameIndex(i)}
-                  className={`w-1.5 h-1.5 border-none cursor-pointer transition-colors ${
-                    i === frameIndex ? "bg-accent" : "bg-dark-50/30"
-                  }`}
-                  aria-label={`Frame ${i + 1}`}
-                />
+            {/* Subtitle row */}
+            <div className="flex items-center gap-4 mb-8 pb-4 border-b border-dark-20">
+              <span className="text-display-section text-dark">Tactical Companion</span>
+              <div className="flex-1 border-t border-dark-20" aria-hidden />
+              <span className="text-micro text-dark-50">v1.0</span>
+            </div>
+
+            {/* Nav links */}
+            <nav className="space-y-2 mb-8">
+              {NAV_LINKS.map((link, i) => (
+                <motion.div
+                  key={link.href}
+                  initial={{ opacity: 0, x: -12 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3 + i * 0.1, duration: 0.4 }}
+                >
+                  <Link
+                    href={link.href}
+                    className="group flex items-center gap-4 px-4 py-3 no-underline border border-dark-20 hover:border-accent bg-bg-card hover:bg-accent-glow transition-all duration-200"
+                  >
+                    <span
+                      className="w-8 h-8 bg-dark flex items-center justify-center shrink-0 group-hover:bg-accent transition-colors duration-200"
+                    >
+                      <span className="text-micro text-white group-hover:text-dark transition-colors duration-200">
+                        {link.code}
+                      </span>
+                    </span>
+                    <div>
+                      <span className="text-display-section text-dark block">
+                        {link.label}
+                      </span>
+                      <span className="text-micro text-dark-50">{link.desc}</span>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </nav>
+
+            {/* Stats row */}
+            <div className="flex gap-6 mt-auto">
+              {[
+                { value: "192", label: "ELEMENTS" },
+                { value: "13", label: "MISSIONS" },
+                { value: "167", label: "KEYWORDS" },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <span
+                    className="text-dark block leading-none mb-0.5"
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontSize: "32px",
+                      fontWeight: 700,
+                    }}
+                  >
+                    {stat.value}
+                  </span>
+                  <span className="text-micro text-dark-50">{stat.label}</span>
+                </div>
               ))}
             </div>
           </div>
 
-          {/* Title */}
-          <div className="text-center mb-10">
-            <h1 className="text-display-hero text-white mb-2">HARDWAR</h1>
-            <span className="text-display-section text-dark-50 tracking-[0.2em]">
-              TACTICAL COMPANION
-            </span>
-          </div>
+          {/* Right column — Terminal feed */}
+          <div className="lg:col-span-7">
+            {/* Terminal panel */}
+            <div className="relative border border-dark-20 bg-bg-card h-full flex flex-col">
+              {/* Corner marks */}
+              <span className="absolute top-0 left-0 w-4 h-4 border-t border-l border-dark-50/40" aria-hidden />
+              <span className="absolute top-0 right-0 w-4 h-4 border-t border-r border-dark-50/40" aria-hidden />
+              <span className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-dark-50/40" aria-hidden />
+              <span className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-dark-50/40" aria-hidden />
 
-          {/* Navigation */}
-          <nav className="w-full max-w-xs space-y-2 mb-12">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="group flex items-center gap-4 px-4 py-2.5 no-underline border border-dark-50/20 hover:border-accent transition-colors"
-              >
-                <span className="text-micro text-dark-50 group-hover:text-accent transition-colors">
-                  {link.code}
-                </span>
-                <span className="text-display-section text-dark-50 group-hover:text-accent transition-colors">
-                  {link.label}
-                </span>
-              </Link>
-            ))}
-          </nav>
+              {/* Terminal header */}
+              <div className="flex items-center justify-between px-5 py-3 border-b border-dark-20">
+                <div className="flex items-center gap-3">
+                  <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
+                  <span className="text-micro text-dark-50">TACTICAL FEED</span>
+                </div>
+                <span className="text-micro text-dark-50">FREQ 7 // ENCRYPTED</span>
+              </div>
+
+              {/* Active message — large display */}
+              <div className="px-5 py-6 border-b border-dark-20">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className={`text-micro px-1.5 py-0.5 ${
+                    currentMsg.priority === "alert"
+                      ? "bg-accent text-dark"
+                      : currentMsg.priority === "intel"
+                      ? "bg-dark text-white"
+                      : "bg-dark-20 text-dark"
+                  }`}>
+                    {currentMsg.prefix}
+                  </span>
+                  <span className="text-micro text-dark-50">{clock}</span>
+                </div>
+                <AnimatePresence mode="wait">
+                  <motion.p
+                    key={msgIndex}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="text-body text-dark m-0 leading-relaxed min-h-[3.2em]"
+                    style={{ fontFamily: "var(--font-mono)", fontSize: "13px" }}
+                  >
+                    {fullText.slice(0, displayedChars)}
+                    {displayedChars < fullText.length && (
+                      <span className="inline-block w-1.5 h-3.5 bg-accent ml-0.5 animate-pulse" />
+                    )}
+                  </motion.p>
+                </AnimatePresence>
+              </div>
+
+              {/* Message feed — recent history */}
+              <div className="flex-1 px-5 py-4 space-y-3 overflow-hidden">
+                <span className="text-micro text-dark-50 block mb-2">RECENT TRAFFIC</span>
+                {recentMessages.map((msg, i) => (
+                  <motion.div
+                    key={`${msgIndex}-${i}`}
+                    initial={{ opacity: 0, y: -4 }}
+                    animate={{ opacity: 1 - i * 0.2, y: 0 }}
+                    transition={{ delay: i * 0.05, duration: 0.3 }}
+                    className="flex gap-3 items-start"
+                  >
+                    <span className="text-micro text-dark-50 shrink-0 w-12">
+                      {msg.prefix}
+                    </span>
+                    <p
+                      className="text-dark-50 m-0 line-clamp-1"
+                      style={{ fontFamily: "var(--font-mono)", fontSize: "11px" }}
+                    >
+                      {msg.text}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Terminal footer */}
+              <div className="flex items-center justify-between px-5 py-3 border-t border-dark-20">
+                <div className="flex items-center gap-2">
+                  <span className="text-micro text-dark-50">AO STATUS:</span>
+                  <span className="text-micro text-accent-dark">CONTESTED</span>
+                </div>
+                <div className="flex gap-1">
+                  {Array.from({ length: 5 }, (_, i) => (
+                    <div
+                      key={i}
+                      className={`w-1 h-3 ${i < 3 ? "bg-accent" : "bg-dark-20"}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="flex items-center justify-between pt-4 border-t border-dark-50/10">
-          <div className="flex gap-6">
-            <span className="text-micro text-dark-50">
-              <span className="text-accent-dark">192</span> ELEMENTS
-            </span>
-            <span className="text-micro text-dark-50">
-              <span className="text-accent-dark">13</span> MISSIONS
-            </span>
-            <span className="text-micro text-dark-50">
-              <span className="text-accent-dark">167</span> KEYWORDS
-            </span>
-          </div>
-          <span className="text-micro text-dark-50/40">
-            MODIPHIUS // 6MM TACTICAL WARGAME
+        <div className="flex items-center justify-between mt-8 pt-4 border-t border-dark-20">
+          <span className="text-micro text-dark-50">
+            MODIPHIUS ENTERTAINMENT // STRATO MINIS STUDIO
           </span>
+          <div className="flex items-center gap-4">
+            <span className="text-micro text-dark-50">6MM TACTICAL WARGAME</span>
+            <div className="w-4 h-4 bg-accent flex items-center justify-center">
+              <span className="text-dark text-[8px] font-bold" style={{ fontFamily: "var(--font-mono)" }}>X</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
