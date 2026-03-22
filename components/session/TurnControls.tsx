@@ -28,7 +28,7 @@ export default function TurnControls() {
     }
   };
 
-  const handleEW = async () => {
+  const handleEW = () => {
     if (!isSolo) {
       addLog('EW: Follow the Core rulebook EW procedure for competitive play.', 'system');
       return;
@@ -37,9 +37,15 @@ export default function TurnControls() {
     try {
       const result = resolveEW(aiInterferencePool);
       updateInterferencePool(result.pool_remaining);
-      addLog(`EW: D12=${result.roll}, ${result.tokens_used} token(s) spent, ${result.pool_remaining} remaining.`, 'system');
+      const jammed = result.roll >= 8;
+      if (jammed) {
+        setJammedComms(true);
+        addLog(`EW: AI jammed comms! (D12=${result.roll}, ${result.tokens_used} tokens spent, ${result.pool_remaining} remaining)`, 'system');
+      } else {
+        addLog(`EW: No jam. (D12=${result.roll}, ${result.tokens_used} tokens spent, ${result.pool_remaining} remaining)`, 'system');
+      }
     } catch {
-      addLog('EW: Backend unavailable — resolve manually.', 'system');
+      addLog('EW: Resolution failed — resolve manually.', 'system');
     }
     setEwResolving(false);
   };

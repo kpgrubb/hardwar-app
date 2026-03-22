@@ -1,5 +1,3 @@
-"use client";
-
 interface DirectionWheelProps {
   highlightSegment?: number; // 1-12, null for none
   size?: number;
