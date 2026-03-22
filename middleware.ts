@@ -42,6 +42,17 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
+  // Restrict to allowed users only
+  const allowedEmails = (process.env.ALLOWED_EMAILS || "").split(",").map(e => e.trim().toLowerCase());
+  if (allowedEmails.length > 0 && allowedEmails[0] !== "" && !allowedEmails.includes(user.email?.toLowerCase() || "")) {
+    // Sign out unauthorized user
+    await supabase.auth.signOut();
+    const url = request.nextUrl.clone();
+    url.pathname = "/login";
+    url.searchParams.set("error", "unauthorized");
+    return NextResponse.redirect(url);
+  }
+
   return supabaseResponse;
 }
 
