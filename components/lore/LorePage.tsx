@@ -77,14 +77,15 @@ export default function LorePage() {
                   <span className="text-micro text-dark-50">p.{selected.page_ref}</span>
                 </div>
 
-                <div className="space-y-6">
+                <div>
                   {selected.content.split("\n\n").map((paragraph, i) => (
                     <motion.p
                       key={i}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: i * 0.03 }}
-                      className="text-body text-secondary mb-5 leading-relaxed"
+                      className="text-body text-secondary leading-relaxed"
+                      style={{ marginBottom: "1.5em" }}
                     >
                       {paragraph}
                     </motion.p>
