@@ -84,7 +84,7 @@ export default function LorePage() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: i * 0.03 }}
-                      className="text-body text-secondary m-0 leading-relaxed"
+                      className="text-body text-secondary mb-5 leading-relaxed"
                     >
                       {paragraph}
                     </motion.p>
