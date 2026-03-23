@@ -1,21 +1,19 @@
 "use client";
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import type { ElementStatCard as ElementStatCardType } from '@/types';
 import StatCell from '@/components/shared/StatCell';
 import CropMarks from '@/components/shared/CropMarks';
 import KeywordText from '@/components/shared/KeywordText';
-import ElementDetailModal from './ElementDetailModal';
 
 interface ElementStatCardProps {
   element: ElementStatCardType;
   compact?: boolean;
   index?: number;
+  onClick?: () => void;
 }
 
-export default function ElementStatCard({ element, compact, index = 0 }: ElementStatCardProps) {
-  const [showDetail, setShowDetail] = useState(false);
+export default function ElementStatCard({ element, compact, index = 0, onClick }: ElementStatCardProps) {
   const { stats } = element;
   const damageBoxes = Array.from({ length: stats.A }, (_, i) => i);
 
@@ -25,7 +23,7 @@ export default function ElementStatCard({ element, compact, index = 0 }: Element
         compact ? '' : 'h-full cursor-pointer'
       }`}
       style={compact ? { width: '3.5in', maxWidth: '3.5in' } : undefined}
-      onClick={compact ? undefined : () => setShowDetail(true)}
+      onClick={compact ? undefined : onClick}
     >
       <CropMarks size={10} />
 
@@ -109,19 +107,12 @@ export default function ElementStatCard({ element, compact, index = 0 }: Element
   if (compact) return card;
 
   return (
-    <>
-      <motion.div
-        initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3, delay: index * 0.02 }}
-      >
-        {card}
-      </motion.div>
-      <AnimatePresence>
-        {showDetail && (
-          <ElementDetailModal element={element} onClose={() => setShowDetail(false)} />
-        )}
-      </AnimatePresence>
-    </>
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3, delay: index * 0.02 }}
+    >
+      {card}
+    </motion.div>
   );
 }

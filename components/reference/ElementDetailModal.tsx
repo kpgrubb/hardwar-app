@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import type { ElementStatCard, KeywordDefinition } from "@/types";
 import StatCell from "@/components/shared/StatCell";
@@ -23,12 +24,27 @@ function lookupKeyword(term: string): KeywordDefinition | undefined {
 interface Props {
   element: ElementStatCard;
   onClose: () => void;
+  onPrev?: () => void;
+  onNext?: () => void;
+  hasPrev?: boolean;
+  hasNext?: boolean;
 }
 
-export default function ElementDetailModal({ element, onClose }: Props) {
+export default function ElementDetailModal({ element, onClose, onPrev, onNext, hasPrev, hasNext }: Props) {
   const { stats } = element;
   const damageBoxes = Array.from({ length: stats.A }, (_, i) => i);
   const lore = elementLore[element.id];
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft" && hasPrev && onPrev) onPrev();
+      if (e.key === "ArrowRight" && hasNext && onNext) onNext();
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [onClose, onPrev, onNext, hasPrev, hasNext]);
 
   const allTerms = [
     ...element.special_rules,
@@ -64,13 +80,31 @@ export default function ElementDetailModal({ element, onClose }: Props) {
               <span className="text-micro text-dark-50">{element.motive_type}</span>
             </div>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <span className="text-meta font-bold bg-accent text-dark px-3 py-1">
               C{element.class}
             </span>
+            <div className="flex gap-1 ml-2">
+              <button
+                onClick={onPrev}
+                disabled={!hasPrev}
+                className="text-meta text-dark-50 hover:text-white bg-transparent border border-dark-50/30 w-8 h-8 flex items-center justify-center cursor-pointer transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
+                aria-label="Previous element"
+              >
+                &larr;
+              </button>
+              <button
+                onClick={onNext}
+                disabled={!hasNext}
+                className="text-meta text-dark-50 hover:text-white bg-transparent border border-dark-50/30 w-8 h-8 flex items-center justify-center cursor-pointer transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
+                aria-label="Next element"
+              >
+                &rarr;
+              </button>
+            </div>
             <button
               onClick={onClose}
-              className="text-meta text-dark-50 hover:text-white bg-transparent border border-dark-50/30 px-2 py-1 cursor-pointer transition-colors"
+              className="text-meta text-dark-50 hover:text-white bg-transparent border border-dark-50/30 px-2 py-1 cursor-pointer transition-colors ml-1"
             >
               ESC
             </button>

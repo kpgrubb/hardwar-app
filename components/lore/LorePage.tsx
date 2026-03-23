@@ -77,7 +77,7 @@ export default function LorePage() {
                   <span className="text-micro text-dark-50">p.{selected.page_ref}</span>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-6">
                   {selected.content.split("\n\n").map((paragraph, i) => (
                     <motion.p
                       key={i}

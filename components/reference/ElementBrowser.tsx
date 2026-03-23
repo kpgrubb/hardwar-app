@@ -1,8 +1,10 @@
 "use client";
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import type { ElementStatCard as ElementType } from '@/types';
 import ElementStatCard from './ElementStatCard';
+import ElementDetailModal from './ElementDetailModal';
 
 interface ElementBrowserProps {
   elements: ElementType[];
@@ -29,6 +31,7 @@ export default function ElementBrowser({ elements }: ElementBrowserProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
+  const [detailId, setDetailId] = useState<string | null>(null);
 
   // Load favorites from localStorage on mount
   useEffect(() => {
@@ -179,7 +182,7 @@ export default function ElementBrowser({ elements }: ElementBrowserProps) {
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 auto-rows-fr">
         {filtered.map((element, i) => (
           <div key={element.id} className="relative">
-            <ElementStatCard element={element} index={i} />
+            <ElementStatCard element={element} index={i} onClick={() => setDetailId(element.id)} />
             {/* Favorite star */}
             <button
               onClick={(e) => { e.stopPropagation(); toggleFavorite(element.id); }}
@@ -201,6 +204,26 @@ export default function ElementBrowser({ elements }: ElementBrowserProps) {
           <p className="text-body text-dark-50">No elements match the current filters.</p>
         </div>
       )}
+
+      {/* Detail modal with arrow navigation */}
+      <AnimatePresence>
+        {detailId && (() => {
+          const idx = filtered.findIndex((e) => e.id === detailId);
+          const el = filtered[idx];
+          if (!el) return null;
+          return (
+            <ElementDetailModal
+              key={detailId}
+              element={el}
+              onClose={() => setDetailId(null)}
+              hasPrev={idx > 0}
+              hasNext={idx < filtered.length - 1}
+              onPrev={() => idx > 0 && setDetailId(filtered[idx - 1].id)}
+              onNext={() => idx < filtered.length - 1 && setDetailId(filtered[idx + 1].id)}
+            />
+          );
+        })()}
+      </AnimatePresence>
     </div>
   );
 }
