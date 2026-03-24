@@ -9,6 +9,7 @@ import SearchPanel from '@/components/reference/SearchPanel';
 const NAV_ITEMS = [
   { href: '/learn', label: 'Learn', code: 'LRN' },
   { href: '/reference', label: 'Reference', code: 'REF' },
+  { href: '/build', label: 'Build', code: 'BLD' },
   { href: '/lore', label: 'Lore', code: 'LOR' },
   { href: '/session', label: 'Session', code: 'SES' },
 ];

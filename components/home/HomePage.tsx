@@ -22,8 +22,9 @@ function useClock() {
 const NAV_LINKS = [
   { href: "/learn", label: "Learn the Rules", code: "01", desc: "Structured modules" },
   { href: "/reference", label: "Rules Reference", code: "02", desc: "Elements & missions" },
-  { href: "/lore", label: "Setting & Lore", code: "03", desc: "The world of Hardwar" },
-  { href: "/session", label: "Session Aid", code: "04", desc: "Solo/Co-op engine" },
+  { href: "/build", label: "Element Builder", code: "03", desc: "Custom construction" },
+  { href: "/lore", label: "Setting & Lore", code: "04", desc: "The world of Hardwar" },
+  { href: "/session", label: "Session Aid", code: "05", desc: "Solo/Co-op engine" },
 ];
 
 export default function HomePage() {
