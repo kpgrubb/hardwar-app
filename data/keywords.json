@@ -2000,9 +2000,9 @@
       "BRACING MASS"
     ],
     "category": "special_rule",
-    "definition_core": "Heavy structural reinforcement providing stability to the element, reducing the effects of recoil and impact.",
+    "definition_core": "Element uses its full Firepower (F) value for Move & Shoot actions instead of halving it. Cannot be taken as a Field Upgrade or by Aircraft. Incompatible with Cumbersome.",
     "definition_quickplay": null,
-    "page_ref_core": 157,
+    "page_ref_core": 160,
     "page_ref_quickplay": null
   },
   {
